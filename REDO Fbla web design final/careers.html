@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Careers | Astra Airlines</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:|Open+Sans:300,400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="overlay" onclick="document.documentElement.style.overflow = 'auto'; document.getElementById('overlay').style.display = 'none'; document.getElementById('overlay').style.width = '0'; document.getElementById('hamburger-menu').style.display = 'none'; document.getElementById('apply-now').style.display = 'none'; document.getElementById('hamburger-menu').style.width = '0'"
+        onfocus="document.documentElement.style.overflow = 'auto';document.getElementById('overlay').style.display = 'none'; document.getElementById('apply-now').style.display = 'none'; document.getElementById('overlay').style.width = '0'; document.getElementById('hamburger-menu').style.display = 'none'; document.getElementById('hamburger-menu').style.width = '0'"></div>
+    <div id="apply-now" style="padding: 40px; background: white; position: fixed; z-index: 5; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none; border-radius: 5px; width: max-content">
+        <form id="apply-form">
+            <span style=" margin-bottom: 30px; text-align: center; font-size: 20px; font-family: Open Sans">Apply for this Job</span>
+            <div style="display: flex; flex-wrap: wrap">
+                <div style="margin-right: 32px">
+                    <label>First Name <span style="color: red">*</span></label>
+                    <input required="" class="airportSelection" type="text" placeholder="Johnny" style="padding: 10px 15px; margin-top: 15px">
+                </div>
+                <div>
+                    <label>Last Name <span style="color: red">*</span></label>
+                    <input required="" class="airportSelection" type="text" placeholder="Appleseed" style="padding: 10px 15px; margin-top: 15px">
+                </div>
+            </div>
+            <div style="display: flex; flex-wrap: wrap">
+                <div style="margin-right: 32px">
+                    <label>Email <span style="color: red">*</span></label>
+                    <input required="" class="airportSelection" type="text" placeholder="appleseedj@liberty.com" style="padding: 10px 15px; margin-top: 15px">
+                </div>
+                <div>
+                    <label>Phone <span style="color: red">*</span></label>
+                    <input required="" class="airportSelection" type="text" placeholder="(123) 456 7890" style="padding: 10px 15px; margin-top: 15px">
+                </div>
+            </div>
+            <label>Resume <span style="color: red">*</span></label>
+            <input type="file" style="margin-top: 15px" required>
+            <input type="submit" value="Submit" class="mainButton" style="margin-top: 30px">
+    </div>
+    </form>
+    </div>
+    <a id="top"></a>
+    <header id="header">
+        <a id="skip-to-content" href="#main">Skip to Content</a>
+        <div id="topnav" role="navigation">
+            <div class="nav" id="hamburger-icon" style="display: none; padding: 0 20px" tabindex="0" onclick="document.documentElement.style.overflow = 'hidden'; document.getElementById('overlay').style.display = 'block'; document.getElementById('overlay').style.width = '100%'; document.getElementById('hamburger-menu').style.display = 'inherit'; document.getElementById('hamburger-menu').style.width = 'auto'"
+                onfocus="document.documentElement.style.overflow = 'hidden'; document.getElementById('overlay').style.display = 'block'; document.getElementById('overlay').style.width = '100%'; document.getElementById('hamburger-menu').style.display = 'inherit'; document.getElementById('hamburger-menu').style.width = 'auto'">
+                <div style="outline: none" class="dropdown">
+                    <span class="dropdown-icon">
+                     <svg viewBox="0 0 24 24" width="24px" height="24px" fill="#5f6368">
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+                     </svg>
+                  </span>
+                </div>
+            </div>
+            <div id="hamburger-menu" style="width: 0; display: none; cursor: default">
+                <div id="hamburger-content" style="display: flex; flex-direction: column">
+                    <div style="display: flex">
+                        <div class="nav" id="hamburger-close" style="display: none; padding: 0 35px 2px 35px; border-bottom: 1px solid #aaa" tabindex="0" onclick="document.documentElement.style.overflow = 'auto'; document.getElementById('overlay').style.display = 'none'; document.getElementById('overlay').style.width = '0'; document.getElementById('hamburger-menu').style.display = 'none'; document.getElementById('hamburger-menu').style.width = '0'"
+                            onfocus="document.documentElement.style.overflow = 'auto';document.getElementById('overlay').style.display = 'none'; document.getElementById('overlay').style.width = '0'; document.getElementById('hamburger-menu').style.display = 'none'; document.getElementById('hamburger-menu').style.width = '0'">
+                            <div style="outline: none" class="dropdown">
+                                <span class="dropdown-icon" style="padding-left: 0 !important">
+                              <svg viewBox="0 0 24 24" width="24px" height="24px" fill="#5f6368" style="margin-top: -1px;">
+                                 <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                 <path d="M0 0h24v24H0z" fill="none"/>
+                              </svg>
+                           </span>
+                            </div>
+                        </div>
+                        <a id="logo-div" href="../index.html" role="banner" style="border-bottom: 1px solid #aaa">
+                            <img src="../img/logo2.png" alt="Liberty Bell logo with circle surrounding it">
+                        </a>
+                    </div>
+                    <details>
+                        <summary class="dropdown hamburger-title" style="justify-content: left">Reservations</summary>
+                        <ul class="hamburger-dropdown">
+                            <li><a tabindex="0" href="reservations/book-a-flight.html">Book a Flight</a></li>
+                            <li><a tabindex="0" href="reservations/where-we-fly.html">Where We Fly</a></li>
+                            <li><a tabindex="0" href="reservations/deals.html">Deals</a></li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary class="dropdown hamburger-title" style="justify-content: left">Travel Information</summary>
+                        <ul class="hamburger-dropdown">
+                            <li><a tabindex="0" href="travel-information/check-in.html">Check-In</a></li>
+                            <li><a tabindex="0" href="travel-information/manage-flights.html">Manage Flight</a></li>
+                            <li><a tabindex="0" href="travel-information/flight-status.html">Flight Status</a></li>
+                            <li><a tabindex="0" href="travel-information/policies.html">Policies</a></li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary class="dropdown hamburger-title" style="justify-content: left">AstraPlus</summary>
+                        <ul class="hamburger-dropdown">
+                            <li><a tabindex="0" href="AstraPlus/membership.html">Membership</a></li>
+                            <li><a tabindex="0" href="AstraPlus/upgrades.html">Upgrades</a></li>
+
+                        </ul>
+                    </details>
+                    <div class="nav" tabindex="0" style="width: 100%">
+                        <a class="dropdown" href="support.html" tabindex="-1" style="width: 100%; justify-content: start" class="hamburger-link">
+                            <span style="padding: 0 20px">Support</span>
+                        </a>
+                    </div>
+                    <div class="nav" tabindex="0" style="width: 100%">
+                        <a class="dropdown" href="careers.html" tabindex="-1" style="width: 100%; justify-content: start" class="hamburger-link">
+                            <span style="padding: 0 20px">Careers</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a id="logo-div" href="index.html" role="banner">
+                <img src="img/logo2.png" alt="Liberty Bell logo with circle surrounding it">
+            </a>
+            <div id="hamburger-collapse">
+                <details class="nav" onmouseover='this.setAttribute("open", "true");' onmouseleave='this.setAttribute("open", "false");'>
+                    <summary class="dropdown" style="padding: 20px 20px">Reservations</summary>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><a tabindex="0" href="reservations/book-a-flight.html">Book a Flight</a></li>
+                            <li><a tabindex="0" href="reservations/where-we-fly.html">Where We Fly</a></li>
+                            <li><a tabindex="0" href="reservations/deals.html">Deals</a></li>
+                        </ul>
+                    </div>
+                </details>
+                <details class="nav" onmouseover='this.setAttribute("open", "true");' onmouseleave='this.setAttribute("open", "false");'>
+                    <summary class="dropdown" style="padding: 20px 20px">Travel Information</summary>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><a tabindex="0" href="travel-information/check-in.html">Check-In</a></li>
+                            <li><a tabindex="0" href="travel-information/manage-flights.html">Manage Flight</a></li>
+                            <li><a tabindex="0" href="travel-information/flight-status.html">Flight Status</a></li>
+                            <li><a tabindex="0" href="travel-information/policies.html">Policies</a></li>
+                        </ul>
+                    </div>
+                </details>
+                <details class="nav" onmouseover='this.setAttribute("open", "true");' onmouseleave='this.setAttribute("open", "false");'>
+                    <summary class="dropdown" style="padding: 20px 20px">AstraPlus</summary>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><a tabindex="0" href="AstraPlus/membership.html">Membership</a></li>
+                            <li><a tabindex="0" href="AstraPlus/upgrades.html">Upgrades</a></li>
+
+                        </ul>
+                    </div>
+                </details>
+                <details class="nav" onmouseover='this.setAttribute("open", "true");' onmouseleave='this.setAttribute("open", "false");'>
+                    <summary class="dropdown" style="padding: 20px 20px">More</summary>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><a tabindex="0" href="careers.html">Careers</a></li>
+
+
+                            <li><a tabindex="0" href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+            <div class="more">
+                <span class="dropdown-icon long-search">
+               <label for="search" class="screenreader">Search Liberty Air:</label>
+               <input required tabindex="0" type="search" name="search" class="long-search search" placeholder="Search Liberty Air" onkeydown="search(this)">
+               </span>
+                <span class="dropdown-icon short-search">
+               <label for="search" class="screenreader">Search Liberty Air:</label>
+               <input required tabindex="0" type="search" name="search" class="search" onfocus="this.placeholder = 'Search Liberty Air';" onmouseover="this.placeholder = 'Search Liberty Air';" onmouseleave="this.placeholder = '';" onfocusout="this.placeholder = '';this.value= ''" onkeydown="search(this)">
+               </span>
+                <div id="lang" style="padding: 28px 20px 29px 20px" tabindex="0">
+                    <div style="outline: none; display: inline; border: none" class="dropdown">
+                        <span class="dropdown-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#5f6368" style="margin-bottom: -7px">
+                           <path xmlns="http://www.w3.org/2000/svg" d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/>
+                        </svg>
+                     </span>
+                    </div>
+                    <div class="dropdown-content" style="right:0; top: 79px; padding-left: 20px">
+                        <ul style="margin-left: -20px">
+                            <li>
+                                <a style="cursor: default">
+                                    <div tabindex="0" id="google_translate_element"></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main role="main" id="main">
+
+        <section class="intro" style="background: #f9f9f9">
+            <div style="padding: 60px">
+                <div class="intro-text" style="width: 100%">
+                    <div class="intro-title" style="font-size: 40px; padding: 0; margin-bottom: 0; text-align: center">Job Openings</div>
+                    <div style="display: flex; justify-content: center; margin: 40px auto 60px auto; width: 100%; flex-flow: row wrap;">
+                        <button class="chip" selected="true" onclick="chipSelection(this)">Featured</button>
+                        <div style="width: 2px; height: 35px;background: rgba(35, 47, 52, 0.5); margin: auto 5px auto 5px"></div>
+                        <button class="chip" selected="false" onclick="chipSelection(this)">Aircrew</button>
+                        <button class="chip" selected="false" onclick="chipSelection(this)">Airport Services</button>
+                        <button class="chip" selected="false" onclick="chipSelection(this)">Corporate</button>
+                        <button class="chip" selected="false" onclick="chipSelection(this)">Customer Support</button>
+                        <button class="chip" selected="false" onclick="chipSelection(this)">Software</button>
+                    </div>
+                    <div class="membership" style="width: 100%; display: block">
+                        <div class="mc-container">
+                            <div class="membershipCard careerParent" style="display: flex;flex-direction: column;">
+                                <div style="font-size: 20px; margin-bottom: 15px; display: flex; align-items: center;">
+                                    <svg width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="careerSvg" fill="#1562ff">
+                                 <path d="M347.94 129.86L203.6 195.83a31.938 31.938 0 0 0-15.77 15.77l-65.97 144.34c-7.61 16.65 9.54 33.81 26.2 26.2l144.34-65.97a31.938 31.938 0 0 0 15.77-15.77l65.97-144.34c7.61-16.66-9.54-33.81-26.2-26.2zm-77.36 148.72c-12.47 12.47-32.69 12.47-45.16 0-12.47-12.47-12.47-32.69 0-45.16 12.47-12.47 32.69-12.47 45.16 0 12.47 12.47 12.47 32.69 0 45.16zM248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm0 448c-110.28 0-200-89.72-200-200S137.72 56 248 56s200 89.72 200 200-89.72 200-200 200z" class=""></path>
+                              </svg>
+                                    <div style="margin-left: 5px; color: #1562ff" class="careerTitle">Pilot, First Captain</div>
+                                </div>
+                                <div style="color: hsla(0, 0%, 7%, 0.8); margin-bottom: 30px" class="careerPara">Responsible for the operation of the aircraft and the safety of the plane and passengers.</div>
+                                <button type="submit" class="mainButton" style="margin-top: auto" onclick="document.documentElement.style.overflow = 'hidden'; document.getElementById('overlay').style.display = 'block'; document.getElementById('overlay').style.width = '100%'; document.getElementById('apply-now').style.display = 'inherit'"
+                                    onfocus="document.documentElement.style.overflow = 'hidden'; document.getElementById('overlay').style.display = 'block'; document.getElementById('overlay').style.width = '100%'; document.getElementById('apply-now').style.display = 'inherit'">Apply Now</button>
+                            </div>
+                            <div class="membershipCard careerParent" style="display: flex;flex-direction: column;">
+                                <div style="font-size: 20px; margin-bottom: 15px; display: flex; align-items: center;">
+                                    <svg width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="careerSvg" fill="#1562ff"><path d="M296 464h-64V346.78l176.74-176.73c15.52-15.52 4.53-42.05-17.42-42.05H24.68c-21.95 0-32.94 26.53-17.42 42.05L184 346.78V464h-64c-22.09 0-40 17.91-40 40 0 4.42 3.58 8 8 8h240c4.42 0 8-3.58 8-8 0-22.09-17.91-40-40-40zM81.1 176h253.8L208 302.9 81.1 176zM432 0c-62.61 0-115.35 40.2-135.18 96h52.54c16.65-28.55 47.27-48 82.64-48 52.93 0 96 43.06 96 96s-43.07 96-96 96c-14.04 0-27.29-3.2-39.32-8.64l-35.26 35.26C379.23 279.92 404.59 288 432 288c79.53 0 144-64.47 144-144S511.53 0 432 0z"></path></svg>
+                                    <div style="margin-left: 5px; color: #1562ff" class="careerTitle">Flight Attendant</div>
+                                </div>
+                                <div style="color: hsla(0, 0%, 7%, 0.8); margin-bottom: 30px" class="careerPara">Keeping airline passengers and crew safe and makes sure everyone follows FAA regulations.</div>
+                                <button type="submit" class="mainButton" style="margin-top: auto" onclick="document.documentElement.style.overflow = 'hidden'; document.getElementById('overlay').style.display = 'block'; document.getElementById('overlay').style.width = '100%'; document.getElementById('apply-now').style.display = 'inherit'"
+                                    onfocus="document.documentElement.style.overflow = 'hidden'; document.getElementById('overlay').style.display = 'block'; document.getElementById('overlay').style.width = '100%'; document.getElementById('apply-now').style.display = 'inherit'">Apply Now</button>
+                            </div>
+                            <div class="membershipCard careerParent" style="display: flex;flex-direction: column;">
+                                <div style="font-size: 20px; margin-bottom: 15px; display: flex; align-items: center;">
+                                    <svg width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="careerSvg" fill="#1562ff"><path d="M464 128h-80V80c0-26.5-21.5-48-48-48H176c-26.5 0-48 21.5-48 48v48H48c-26.5 0-48 21.5-48 48v256c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V176c0-26.5-21.5-48-48-48zM176 80h160v48H176V80zM48 432V176h80v256H48zm128 0V176h160v256H176zm288 0h-80V176h80v256z" class=""></path></svg>
+                                    <div style="margin-left: 5px; color: #1562ff" class="careerTitle">Ramp Service Agent</div>
+                                </div>
+                                <div style="color: hsla(0, 0%, 7%, 0.8); margin-bottom: 30px" class="careerPara">Loads and unloads suitcases or luggage, and other cargo for transport via aircraft.</div>
+                                <button type="submit" class="mainButton" style="margin-top: auto" onclick="document.documentElement.style.overflow = 'hidden'; document.getElementById('overlay').style.display = 'block'; document.getElementById('overlay').style.width = '100%'; document.getElementById('apply-now').style.display = 'inherit'"
+                                    onfocus="document.documentElement.style.overflow = 'hidden'; document.getElementById('overlay').style.display = 'block'; document.getElementById('overlay').style.width = '100%'; document.getElementById('apply-now').style.display = 'inherit'">Apply Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="intro" style="background: white">
+            <div style="padding: 60px">
+                <div class="intro-text wow fadeIn" data-wow-delay="0.15s" style="width: 100%">
+                    <div class="intro-title" style="font-size: 40px; padding: 0;">Hear from our Employees</div>
+                    <div style="display: flex; width: fit-content; margin: 60px auto 0 auto" class="membership">
+                        <div class="intro-media" style="margin-right: 80px">
+                            <img src="img/unnamed.jpg" style="max-width: 200px; border-radius: 50%; margin: auto">
+                        </div>
+                        <div class="intro-para" style="margin: auto 0">
+                            <div style="font-size: 30px; color: #000;font-family: Open Sans; line-height: 1">Aaryan Padh</div>
+                            <div style="font-size: 16px; color: #000; margin-bottom: 20px">Technician, Astra Airlines</div>
+                            <div style="font-size: 18px; color: #000; max-width: 800px">“Liberty Airlines is a company that encourages growth and development. Never once bored with my job, Astra Airlines let me grow as a person and made me truly appreciate their airline.”</div>
+                        </div>
+                    </div>
+                    <div style="display: flex; width: fit-content; margin: 30px auto 0 auto; position: relative" class="membership leftAlign">
+                        <div class="intro-para" style="margin: auto 0">
+                            <div style="font-size: 30px; color: #000;font-family: Open Sans; line-height: 1; text-align: right">Armaan Shah</div>
+                            <div style="font-size: 16px; color: #000; margin-bottom: 20px; text-align: right">Customer Service Supervisor, Astra Airlines</div>
+                            <div style="font-size: 18px; color: #000; max-width: 800px; text-align: right">“It wasn't until I came to this job, I truly understood the meaning of customer service after working with incredible people who push you to your boundaries, so you can become the best at your job. ”
+                            </div>
+                        </div>
+                        <div class="intro-media" style="margin-left: 80px">
+                            <img src="img/unnamed-2.jpg" style="max-width: 200px; border-radius: 50%; margin: auto">
+                        </div>
+                    </div>
+                    <div style="display: flex; width: fit-content; margin: 60px auto 0 auto;" class="membership">
+                        <div class="intro-media" style="margin-right: 80px">
+                            <img src="img/unnamed3.jpg" style="max-width: 200px; border-radius: 50%; margin: auto">
+                        </div>
+                        <div class="intro-para" style="margin: auto 0">
+                            <div style="font-size: 30px; color: #000;font-family: Open Sans; line-height: 1">Srihaan Patel</div>
+                            <div style="font-size: 16px; color: #000; margin-bottom: 20px">Pilot, Astra Airlines</div>
+                            <div style="font-size: 18px; color: #000; max-width: 800px">“This place has an outstanding flight department management that gave one hundred percent support to it's pilots and backed all their decisions, especially those made in the midst of mechanical or medical emergencies.”</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+    <footer>
+
+        <div class="footer">
+            <div class="contain">
+                <div class="col">
+                    <h1>Reservations</h1>
+                    <ul>
+                        <li><a tabindex="0" href="reservations/book-a-flight.html">Book a Flight</a></li>
+                        <li><a tabindex="0" href="reservations/where-we-fly.html">Where We Fly</a></li>
+                        <li><a tabindex="0" href="reservations/deals.html">Deals</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h1>Travel Information</h1>
+                    <ul>
+                        <li><a href="travel-information/check-in.html">Check-In</a></li>
+                        <li><a href="travel-information/manage-flights.html">Manage Flight</a></li>
+                        <li><a href="travel-information/flight-status.html">Flight Status</a></li>
+                        <li><a href="travel-information/policies.html">Policies</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h1>AstraPlus</h1>
+                    <ul>
+                        <li><a href="AstraPlus/membership.html">Membership</a></li>
+                        <li><a href="AstraPlus/upgrades.html">Upgrades</a></li>
+
+                    </ul>
+                </div>
+                <div class="col">
+                    <h1>Other</h1>
+                    <ul>
+                        <li><a href="support.html">Support</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="credit.html" style="border: solid 1px white; padding: 0 5px">CREDIT</a></li>
+                    </ul>
+                </div>
+                <div class="col social">
+                    <h1>
+                        Social
+                        <svg style="width: 24px; vertical-align: middle; margin-top: -4px" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#fff">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                     </svg>
+                    </h1>
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank">
+                                <svg style="height: 24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                              <path fill="currentColor" d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z" class=""></path>
+                           </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/" target="_blank">
+                                <svg style="height: 24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                              <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" class=""></path>
+                           </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.twitter.com/" target="_blank">
+                                <svg style="height: 24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                              <path fill="currentColor" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z" class=""></path>
+                           </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/" target="_blank">
+                                <svg style="height: 24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                              <path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" class=""></path>
+                           </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js">
+    </script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                    pageLanguage: 'en'
+                },
+                'google_translate_element'
+            );
+        }
+
+        Chart.defaults.global.legend.display = false;
+        Chart.defaults.global.title
+
+        Chart.pluginService.register({
+            beforeDraw: function(chart) {
+                if (chart.config.options.elements.center) {
+                    //Get ctx from string
+                    var ctx = chart.chart.ctx;
+
+                    //Get options from the center object in options
+                    var centerConfig = chart.config.options.elements.center;
+                    var fontStyle = centerConfig.fontStyle || 'Arial';
+                    var txt = centerConfig.text;
+                    var color = centerConfig.color || '#000';
+                    var sidePadding = centerConfig.sidePadding || 20;
+                    var sidePaddingCalculated = (sidePadding / 100) * (chart.innerRadius * 2)
+                        //Start with a base font of 30px
+                    ctx.font = "30px " + fontStyle;
+
+                    //Get the width of the string and also the width of the element minus 10 to give it 5px side padding
+                    var stringWidth = ctx.measureText(txt).width;
+                    var elementWidth = (chart.innerRadius * 2) - sidePaddingCalculated;
+
+                    // Find out how much the font can grow in width.
+                    var widthRatio = elementWidth / stringWidth;
+                    var newFontSize = Math.floor(30 * widthRatio);
+                    var elementHeight = (chart.innerRadius * 2);
+
+                    // Pick a new font size so it will not be larger than the height of label.
+                    var fontSizeToUse = Math.min(newFontSize, elementHeight);
+
+                    //Set font settings to draw it correctly.
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+                    var centerX = ((chart.chartArea.left + chart.chartArea.right) / 2);
+                    var centerY = ((chart.chartArea.top + chart.chartArea.bottom) / 2);
+                    ctx.font = fontSizeToUse + "px " + fontStyle;
+                    ctx.fillStyle = color;
+
+                    //Draw text in center
+                    ctx.fillText(txt, centerX, centerY);
+                }
+            }
+        });
+
+
+        var config = {
+            type: 'doughnut',
+            data: {
+                labels: [
+                    "Male",
+                    "Female",
+                ],
+                datasets: [{
+                    data: [57, 43],
+                    backgroundColor: [
+                        "#19A0AA",
+                        "#F15F36",
+                    ],
+                    hoverBackgroundColor: [
+                        "#19A0AA",
+                        "#F15F36",
+                    ]
+                }],
+
+            },
+            options: {
+                elements: {
+                    center: {
+                        text: '43% Female',
+                        color: '#F15F36', // Default is #000000
+                        fontStyle: 'Arial', // Default is Arial
+                        sidePadding: 20 // Defualt is 20 (as a percentage)
+                    },
+                },
+                cutoutPercentage: 85,
+                title: {
+                    display: true,
+                    text: 'Overall Gender Diversity',
+                    fontFamily: 'Open Sans',
+                    fontSize: 20
+                }
+            }
+        };
+
+        var ctx = document.getElementById('diversityPie');
+        var myPieChart = new Chart(ctx, config);
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <link rel="stylesheet" href="animate.css">
+    <script type="text/javascript" src="wow.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script async type="text/javascript" src="https://userlike-cdn-widgets.s3-eu-west-1.amazonaws.com/c621f009e590e812a678b1a0f9317cb43f246b5ea23241aa988b921188c1297c.js"></script>
+</body>
+
+</html>

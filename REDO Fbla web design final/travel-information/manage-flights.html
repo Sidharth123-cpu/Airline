@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Manage Flights | Liberty Air</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans:300,400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="overlay" onclick="document.documentElement.style.overflow = 'auto'; document.getElementById('overlay').style.display = 'none'; document.getElementById('overlay').style.width = '0'; document.getElementById('hamburger-menu').style.display = 'none'; document.getElementById('hamburger-menu').style.width = '0'"
+        onfocus="document.documentElement.style.overflow = 'auto';document.getElementById('overlay').style.display = 'none'; document.getElementById('overlay').style.width = '0'; document.getElementById('hamburger-menu').style.display = 'none'; document.getElementById('hamburger-menu').style.width = '0'"></div>
+    <a id="top"></a>
+    <header id="header">
+        <a id="skip-to-content" href="#main">Skip to Content</a>
+        <div id="topnav" role="navigation">
+            <div class="nav" id="hamburger-icon" style="display: none; padding: 0 20px" tabindex="0" onclick="document.documentElement.style.overflow = 'hidden'; document.getElementById('overlay').style.display = 'block'; document.getElementById('overlay').style.width = '100%'; document.getElementById('hamburger-menu').style.display = 'inherit'; document.getElementById('hamburger-menu').style.width = 'auto'"
+                onfocus="document.documentElement.style.overflow = 'hidden'; document.getElementById('overlay').style.display = 'block'; document.getElementById('overlay').style.width = '100%'; document.getElementById('hamburger-menu').style.display = 'inherit'; document.getElementById('hamburger-menu').style.width = 'auto'">
+                <div style="outline: none" class="dropdown">
+                    <span class="dropdown-icon">
+                     <svg viewBox="0 0 24 24" width="24px" height="24px" fill="#5f6368">
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+                     </svg>
+                  </span>
+                </div>
+            </div>
+            <div id="hamburger-menu" style="width: 0; display: none; cursor: default">
+                <div id="hamburger-content" style="display: flex; flex-direction: column">
+                    <div style="display: flex">
+                        <div class="nav" id="hamburger-close" style="display: none; padding: 0 35px 2px 35px; border-bottom: 1px solid #aaa" tabindex="0" onclick="document.documentElement.style.overflow = 'auto'; document.getElementById('overlay').style.display = 'none'; document.getElementById('overlay').style.width = '0'; document.getElementById('hamburger-menu').style.display = 'none'; document.getElementById('hamburger-menu').style.width = '0'"
+                            onfocus="document.documentElement.style.overflow = 'auto';document.getElementById('overlay').style.display = 'none'; document.getElementById('overlay').style.width = '0'; document.getElementById('hamburger-menu').style.display = 'none'; document.getElementById('hamburger-menu').style.width = '0'">
+                            <div style="outline: none" class="dropdown">
+                                <span class="dropdown-icon" style="padding-left: 0 !important">
+                              <svg viewBox="0 0 24 24" width="24px" height="24px" fill="#5f6368" style="margin-top: -1px;">
+                                 <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                 <path d="M0 0h24v24H0z" fill="none"/>
+                              </svg>
+                           </span>
+                            </div>
+                        </div>
+                        <a id="logo-div" href="../index.html" role="banner" style="border-bottom: 1px solid #aaa">
+                            <img src="../img/logo.png" alt="Liberty Bell logo with circle surrounding it">
+                        </a>
+                    </div>
+                    <details>
+                        <summary class="dropdown hamburger-title" style="justify-content: left;">Reservations</summary>
+                        <ul class="hamburger-dropdown">
+                            <li><a tabindex="0" href="../reservations/book-a-flight.html">Book a Flight</a></li>
+                            <li><a tabindex="0" href="../reservations/where-we-fly.html">Where We Fly</a></li>
+
+                        </ul>
+                    </details>
+                    <details>
+                        <summary class="dropdown hamburger-title" style="justify-content: left">Travel Information</summary>
+                        <ul class="hamburger-dropdown">
+                            <li><a tabindex="0" href="../travel-information/check-in.html">Check-In</a></li>
+                            <li><a tabindex="0" href="../travel-information/manage-flights.html">Manage Flight</a></li>
+                            <li><a tabindex="0" href="../travel-information/flight-status.html">Flight Status</a></li>
+                            <li><a tabindex="0" href="../travel-information/policies.html">Policies</a></li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary class="dropdown hamburger-title" style="justify-content: left">AstraPlus</summary>
+                        <ul class="hamburger-dropdown">
+                            <li><a tabindex="0" href="../AstraPlus/membership.html">Membership</a></li>
+                            <li><a tabindex="0" href="../AstraPlus/upgrades.html">Upgrades</a></li>
+                            <li><a tabindex="0" href="../AstraPlus/redeem-miles.html">Redeem Miles</a></li>
+                        </ul>
+                    </details>
+                    <div class="nav" tabindex="0" style="width: 100%">
+
+                        </a>
+                    </div>
+                    <div class="nav" tabindex="0" style="width: 100%">
+                        <a class="dropdown" href="../careers.html" tabindex="-1" style="width: 100%; justify-content: start" class="hamburger-link">
+                            <span style="padding: 0 20px">Careers</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a id="logo-div" href="../index.html" role="banner">
+                <img src="../img/logo2.png" alt="Liberty Bell logo with circle surrounding it">
+            </a>
+            <div id="hamburger-collapse">
+                <details class="nav" onmouseover='this.setAttribute("open", "true");' onmouseleave='this.setAttribute("open", "false");'>
+                    <summary class="dropdown" style="padding: 20px 20px">Reservations</summary>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><a tabindex="0" href="../reservations/book-a-flight.html">Book a Flight</a></li>
+                            <li><a tabindex="0" href="../reservations/where-we-fly.html">Where We Fly</a></li>
+
+                        </ul>
+                    </div>
+                </details>
+                <details class="nav" onmouseover='this.setAttribute("open", "true");' onmouseleave='this.setAttribute("open", "false");' style="border-bottom: 3px #1562ff solid;">
+                    <summary class="dropdown" style="padding: 20px 20px">Travel Information</summary>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><a tabindex="0" href="../travel-information/check-in.html">Check-In</a></li>
+                            <li><a tabindex="0" href="../travel-information/manage-flights.html">Manage Flight</a></li>
+                            <li><a tabindex="0" href="../travel-information/flight-status.html">Flight Status</a></li>
+                            <li><a tabindex="0" href="../travel-information/policies.html">Policies</a></li>
+                        </ul>
+                    </div>
+                </details>
+                <details class="nav" onmouseover='this.setAttribute("open", "true");' onmouseleave='this.setAttribute("open", "false");'>
+                    <summary class="dropdown" style="padding: 20px 20px">AstraPlus</summary>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><a tabindex="0" href="../AstraPlus/membership.html">Membership</a></li>
+                            <li><a tabindex="0" href="../AstraPlus/upgrades.html">Upgrades</a></li>
+                            <li><a tabindex="0" href="../AstraPlus/redeem-miles.html">Redeem Miles</a></li>
+                        </ul>
+                    </div>
+                </details>
+                <details class="nav" onmouseover='this.setAttribute("open", "true");' onmouseleave='this.setAttribute("open", "false");'>
+                    <summary class="dropdown" style="padding: 20px 20px">More</summary>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><a tabindex="0" href="careers.html">Careers</a></li>
+                            <li><a tabindex="0" href="aboutus.html">About Us</a></li>
+                            <li><a tabindex="0" href="SignInPage.html">Client login</a></li>
+                            <li><a tabindex="0" href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </details>
+
+            </div>
+            <div class="more">
+                <span class="dropdown-icon long-search">
+               <label for="search" class="screenreader">Search Astra Airlines:</label>
+               <input required tabindex="0" type="search" name="search" class="long-search search" placeholder="Search Astra Airlines" onkeydown="search(this)">
+               </span>
+                <span class="dropdown-icon short-search">
+               <label for="search" class="screenreader">Search Astra Airlines:</label>
+               <input required tabindex="0" type="search" name="search" class="search" onfocus="this.placeholder = 'Search Astra Airlines';" onmouseover="this.placeholder = 'Search Astra Airlines';" onmouseleave="this.placeholder = '';" onfocusout="this.placeholder = '';this.value= ''" onkeydown="search(this)">
+               </span>
+                <div id="lang" style="padding: 28px 20px 29px 20px" tabindex="0">
+                    <div style="outline: none; display: inline; border: none" class="dropdown">
+                        <span class="dropdown-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#5f6368" style="margin-bottom: -7px">
+                           <path xmlns="http://www.w3.org/2000/svg" d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/>
+                        </svg>
+                     </span>
+                    </div>
+                    <div class="dropdown-content" style="right:0; top: 79px; padding-left: 20px">
+                        <ul style="margin-left: -20px">
+                            <li>
+                                <a style="cursor: default">
+                                    <div tabindex="0" id="google_translate_element"></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main role="main" id="main">
+        <div style="width: 100%" class="confetti">
+            <div style="background: #f0f0f0">
+                <div style="padding: 60px 20px 40px 20px; margin: auto; display: flex; max-width: 1000px">
+                    <span style="font-family: Open Sans; font-size: 40px">Manage Flights</span>
+                </div>
+            </div>
+            <div style="width: 100%">
+                <div style="margin: 0 auto; max-width: 1000px; padding: 20px">
+                    <div style="display: block;">
+                        <div style="margin: 40px 16px; text-align: center">View flight details, change seats, change dates/times, or cancel a current reservation.</div>
+                        <form style="margin: 16px 0; text-align: center">
+                            <div style="display: inline-block; margin-bottom: 16px">
+                                <label for="lastName" style="display:block; font-size: 14.4px; margin-bottom: 0.4em; text-align: left">Last Name</label>
+                                <input required="" class="airportSelection" name="lastName" type="text">
+                            </div>
+                            <br>
+                            <div style="display: inline-block">
+                                <label for="ticketNumber" style="display:block; font-size: 14.4px; margin-bottom: 0.4em; text-align: left">Confirmation Code / eTicket #</label>
+                                <input required="" class="airportSelection" name="ticketNumber" type="text">
+                            </div>
+                            <button class="mainButton" style="margin-top: 32px">Continue</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="contain">
+                <div class="col">
+                    <h1>Reservations</h1>
+                    <ul>
+                        <li><a tabindex="0" href="../reservations/book-a-flight.html">Book a Flight</a></li>
+                        <li><a tabindex="0" href="../reservations/where-we-fly.html">Where We Fly</a></li>
+
+                    </ul>
+                </div>
+                <div class="col">
+                    <h1>Travel Information</h1>
+                    <ul>
+                        <li><a href="../travel-information/check-in.html">Check-In</a></li>
+                        <li><a href="../travel-information/manage-flights.html">Manage Flight</a></li>
+                        <li><a href="../travel-information/flight-status.html">Flight Status</a></li>
+                        <li><a href="../travel-information/policies.html">Policies</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h1>AstraPlus</h1>
+                    <ul>
+                        <li><a href="../AstraPlus/membership.html">Membership</a></li>
+                        <li><a href="../AstraPlus/upgrades.html">Upgrades</a></li>
+                        <li><a href="../AstraPlus/redeem-miles.html">Redeem Miles</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h1>Other</h1>
+                    <ul>
+
+                        <li><a href="../careers.html">Careers</a></li>
+                        <li><a href="../credit.html" style="border: solid 1px white; padding: 0 5px">CREDIT</a></li>
+                    </ul>
+                </div>
+                <div class="col social">
+                    <h1>
+                        Social
+                        <svg style="width: 24px; vertical-align: middle; margin-top: -4px" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#fff">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                     </svg>
+                    </h1>
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank">
+                                <svg style="height: 24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                              <path fill="currentColor" d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z" class=""></path>
+                           </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/" target="_blank">
+                                <svg style="height: 24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                              <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" class=""></path>
+                           </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.twitter.com/" target="_blank">
+                                <svg style="height: 24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                              <path fill="currentColor" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z" class=""></path>
+                           </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/" target="_blank">
+                                <svg style="height: 24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                              <path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" class=""></path>
+                           </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                    pageLanguage: 'en'
+                },
+                'google_translate_element'
+            );
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    </script>
+
+    <script async type="text/javascript" src="https://userlike-cdn-widgets.s3-eu-west-1.amazonaws.com/c621f009e590e812a678b1a0f9317cb43f246b5ea23241aa988b921188c1297c.js"></script>
+</body>
+
+</html>

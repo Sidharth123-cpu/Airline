@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Book a Flight | Astra Airlines</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans:300,400&display=swap" rel="stylesheet">
+</head>
+
+<body onload="autoFillBook(); flightCalendar(); flightCalendar2(); selectDay(document.getElementById('departureSelection').getElementsByTagName('tr')[0]); selectDay2(document.getElementById('returnSelection').getElementsByTagName('tr')[0]);">
+    <div id="overlay" onclick="document.documentElement.style.overflow = 'auto'; document.getElementById('overlay').style.display = 'none'; document.getElementById('overlay').style.width = '0'; document.getElementById('hamburger-menu').style.display = 'none'; document.getElementById('hamburger-menu').style.width = '0'"
+        onfocus="document.documentElement.style.overflow = 'auto';document.getElementById('overlay').style.display = 'none'; document.getElementById('overlay').style.width = '0'; document.getElementById('hamburger-menu').style.display = 'none'; document.getElementById('hamburger-menu').style.width = '0'"></div>
+    <a id="top"></a>
+    <header id="header">
+        <a id="skip-to-content" href="#main">Skip to Content</a>
+        <div id="topnav" role="navigation">
+            <div class="nav" id="hamburger-icon" style="display: none; padding: 0 20px" tabindex="0" onclick="document.documentElement.style.overflow = 'hidden'; document.getElementById('overlay').style.display = 'block'; document.getElementById('overlay').style.width = '100%'; document.getElementById('hamburger-menu').style.display = 'inherit'; document.getElementById('hamburger-menu').style.width = 'auto'"
+                onfocus="document.documentElement.style.overflow = 'hidden'; document.getElementById('overlay').style.display = 'block'; document.getElementById('overlay').style.width = '100%'; document.getElementById('hamburger-menu').style.display = 'inherit'; document.getElementById('hamburger-menu').style.width = 'auto'">
+                <div style="outline: none" class="dropdown">
+                    <span class="dropdown-icon">
+                     <svg viewBox="0 0 24 24" width="24px" height="24px" fill="#5f6368">
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+                     </svg>
+                  </span>
+                </div>
+            </div>
+            <div id="hamburger-menu" style="width: 0; display: none; cursor: default">
+                <div id="hamburger-content" style="display: flex; flex-direction: column">
+                    <div style="display: flex">
+                        <div class="nav" id="hamburger-close" style="display: none; padding: 0 35px 2px 35px; border-bottom: 1px solid #aaa" tabindex="0" onclick="document.documentElement.style.overflow = 'auto'; document.getElementById('overlay').style.display = 'none'; document.getElementById('overlay').style.width = '0'; document.getElementById('hamburger-menu').style.display = 'none'; document.getElementById('hamburger-menu').style.width = '0'"
+                            onfocus="document.documentElement.style.overflow = 'auto';document.getElementById('overlay').style.display = 'none'; document.getElementById('overlay').style.width = '0'; document.getElementById('hamburger-menu').style.display = 'none'; document.getElementById('hamburger-menu').style.width = '0'">
+                            <div style="outline: none" class="dropdown">
+                                <span class="dropdown-icon" style="padding-left: 0 !important">
+                              <svg viewBox="0 0 24 24" width="24px" height="24px" fill="#5f6368" style="margin-top: -1px;">
+                                 <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                 <path d="M0 0h24v24H0z" fill="none"/>
+                              </svg>
+                           </span>
+                            </div>
+                        </div>
+                        <a id="logo-div" href="../index.html" role="banner" style="border-bottom: 1px solid #aaa">
+                            <img src="../img/logo2.png" alt="Astra airlines logo">
+                        </a>
+
+                    </div>
+                    <details>
+                        <summary class="dropdown hamburger-title" style="justify-content: left;">Reservations</summary>
+                        <ul class="hamburger-dropdown">
+                            <li><a tabindex="0" href="../reservations/book-a-flight.html">Book a Flight</a></li>
+                            <li><a tabindex="0" href="../reservations/where-we-fly.html">Where We Fly</a></li>
+
+                        </ul>
+                    </details>
+                    <details>
+                        <summary class="dropdown hamburger-title" style="justify-content: left">Travel Information</summary>
+                        <ul class="hamburger-dropdown">
+                            <li><a tabindex="0" href="../travel-information/check-in.html">Check-In</a></li>
+                            <li><a tabindex="0" href="../travel-information/manage-flights.html">Manage Flight</a></li>
+                            <li><a tabindex="0" href="../travel-information/flight-status.html">Flight Status</a></li>
+                            <li><a tabindex="0" href="../travel-information/policies.html">Policies</a></li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary class="dropdown hamburger-title" style="justify-content: left">AstraPlus</summary>
+                        <ul class="hamburger-dropdown">
+                            <li><a tabindex="0" href="../AstraPlus/membership.html">Membership</a></li>
+                            <li><a tabindex="0" href="../AstraPlus/upgrades.html">Upgrades</a></li>
+
+                        </ul>
+                    </details>
+                    <details>
+                        <summary class="dropdown hamburger-title" style="justify-content: left">More</summary>
+                        <ul class="hamburger-dropdown">
+                            <li><a tabindex="0" href="contact.html">Contact</a></li>
+                            <li><a tabindex="0" href="SignInPage.html">Sign In</a></li>
+                            <li><a tabindex="0" href="careers.html">Careers</a></li>
+                            <li><a tabindex="0" href="aboutus.html">About Us</a></li>
+
+                        </ul>
+                    </details>
+                </div>
+            </div>
+
+            <a id="logo-div" href="../index.html" role="banner" style="border-bottom: 1px solid #aaa">
+                <img src="../img/logo2.png" alt="Astra airlines logo">
+            </a>
+
+
+            <div id="hamburger-collapse">
+                <details class="nav" onmouseover='this.setAttribute("open", "true");' onmouseleave='this.setAttribute("open", "false");' style="border-bottom: 3px #1562ff solid;">
+                    <summary class="dropdown" style="padding: 20px 20px">Reservations</summary>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><a tabindex="0" href="../reservations/book-a-flight.html">Book a Flight</a></li>
+                            <li><a tabindex="0" href="../reservations/where-we-fly.html">Where We Fly</a></li>
+
+                        </ul>
+                    </div>
+                </details>
+                <details class="nav" onmouseover='this.setAttribute("open", "true");' onmouseleave='this.setAttribute("open", "false");'>
+                    <summary class="dropdown" style="padding: 20px 20px">Travel Information</summary>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><a tabindex="0" href="../travel-information/check-in.html">Check-In</a></li>
+                            <li><a tabindex="0" href="../travel-information/manage-flights.html">Manage Flight</a></li>
+                            <li><a tabindex="0" href="../travel-information/flight-status.html">Flight Status</a></li>
+                            <li><a tabindex="0" href="../travel-information/policies.html">Policies</a></li>
+                        </ul>
+                    </div>
+                </details>
+                <details class="nav" onmouseover='this.setAttribute("open", "true");' onmouseleave='this.setAttribute("open", "false");'>
+                    <summary class="dropdown" style="padding: 20px 20px">AstraPlus</summary>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><a tabindex="0" href="../AstraPlus/membership.html">Membership</a></li>
+                            <li><a tabindex="0" href="../AstraPlus/upgrades.html">Upgrades</a></li>
+
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="nav" onmouseover='this.setAttribute("open", "true");' onmouseleave='this.setAttribute("open", "false");'>
+                    <summary class="dropdown" style="padding: 20px 20px">More</summary>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><a tabindex="0" href="careers.html">Careers</a></li>
+                            <li><a tabindex="0" href="aboutus.html">About Us</a></li>
+                            <li><a tabindex="0" href="SignInPage.html">Client login</a></li>
+                            <li><a tabindex="0" href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </details>
+
+
+            </div>
+            <div class="more">
+                <span class="dropdown-icon long-search">
+               <label for="search" class="screenreader">Search Astra Airlines:</label>
+               <input required tabindex="0" type="search" name="search" class="long-search search" placeholder="Search Astra Airlines" onkeydown="search(this)">
+               </span>
+                <span class="dropdown-icon short-search">
+               <label for="search" class="screenreader">Search Astra Airlines:</label>
+               <input required tabindex="0" type="search" name="search" class="search" onfocus="this.placeholder = 'Search Astra Airlines';" onmouseover="this.placeholder = 'Search Astra Airlines';" onmouseleave="this.placeholder = '';" onfocusout="this.placeholder = '';this.value= ''" onkeydown="search(this)">
+               </span>
+                <div id="lang" style="padding: 28px 20px 29px 20px" tabindex="0">
+                    <div style="outline: none; display: inline; border: none" class="dropdown">
+                        <span class="dropdown-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#5f6368" style="margin-bottom: -7px">
+                           <path xmlns="http://www.w3.org/2000/svg" d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/>
+                        </svg>
+                     </span>
+                    </div>
+                    <div class="dropdown-content" style="right:0; top: 79px; padding-left: 20px">
+                        <ul style="margin-left: -20px">
+                            <li>
+                                <a style="cursor: default">
+                                    <div tabindex="0" id="google_translate_element"></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main role="main" id="main">
+        <div style="width: calc(100% - 40px); padding: 0 20px" class="confetti">
+            <div style="padding: 60px 0 40px 0; margin: auto; max-width: 1000px; background: url(); display: flex" class="titleParent">
+                <span style="font-family: Open Sans; font-size: 40px">Book A Flight</span>
+                <div style="display: flex; flex-direction: column; width: 600px; margin: 0 0 0 auto" class="progressParent">
+                    <div style="display: flex; justify-content: space-around; margin-bottom: 5px">
+                        <span style="width: 100px; text-align: center">Departure</span>
+                        <span style="width: 100px; text-align: center">Return</span>
+                        <span style="width: 100px; text-align: center">Bags + Seats</span>
+                        <span style="width: 100px; text-align: center">Checkout</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-around" id="triangle-container">
+                        <span style="background: #1562ff"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div id="progressbar">
+                        <div id="progresschild"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="background: #f0f0f0; width: calc(100% - 40px); padding: 0 20px" class="bookParent">
+            <div style="max-width: 1000px; padding: 63.76px 0 30px 0; margin: auto" id="book2">
+                <form style="display: block">
+                    <div style="display: flex; justify-content: flex-start; margin-bottom: 16px">
+                        <div class="autocomplete">
+                            <label for="from" style="display:block; font-size: 14.4px; margin-bottom: 0.4em; margin-top: -23.76px">From</label>
+                            <input required="" class="airportSelection" placeholder=" " list="airports" name="from" autocomplete="off" type="text" id="from" spellcheck="false">
+                        </div>
+                        <div class="autocomplete" onclick="var tmp = document.getElementsByName('from')[0].value; document.getElementsByName('from')[0].value = document.getElementsByName('to')[0].value;document.getElementsByName('to')[0].value = tmp">
+                            <svg id="swap" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#5f6368">
+                           <path d="M6.99 11L3 15l3.99 4v-3H14v-2H6.99v-3zM21 9l-3.99-4v3H10v2h7.01v3L21 9z"></path>
+                           <path d="M0 0h24v24H0z" fill="none"></path>
+                        </svg>
+                        </div>
+                        <div class="autocomplete">
+                            <label for="to" style="display:block; font-size: 14.4px; margin-bottom: 0.4em; margin-top: -23.76px">To</label>
+                            <input required="" class="airportSelection" placeholder=" " list="airports2" name="to" autocomplete="off" type="text" id="to" spellcheck="false">
+                        </div>
+                        <div style="margin-left: 20px">
+                            <label for="departure" style="display:block; font-size: 14.4px; margin-bottom: 0.4em; margin-top: -23.76px">Departure</label>
+                            <input required="" style="width: 182px" type="date" name="departure" class="flightDate">
+                        </div>
+                        <div id="returnDiv" style="margin-left: 20px">
+                            <label for="return" style="display:block; font-size: 14.4px; margin-bottom: 0.4em; margin-top: -23.76px">Return</label>
+                            <input required="" style="width: 182px" type="date" name="return" class="flightDate">
+                        </div>
+                    </div>
+                    <div style="display:flex; justify-content: flex-start; margin: 24px 0">
+                        <select name="flightType" style="font-size: 16px" class="select-css" onchange="if(this.value == 'oneWay') {document.getElementById('returnDiv').style.visibility = 'hidden'; document.getElementsByName('return')[0].required = false} else {document.getElementById('returnDiv').style.visibility = 'visible'; document.getElementsByName('return')[0].required = true}">
+                        <option value="roundTrip">Round Trip  &nbsp;&nbsp;</option>
+                        <option value="oneWay">One Way‎‎‎  &nbsp;&nbsp;</option>
+                     </select>
+                        <div id="parentPassenger" name="passenger" style="font-size: 16px; margin: 0 20px -23.76px 20px; height: min-content" class="select-css" tabindex="0" onfocus="try{document.getElementById('#passengerSelection').style.display = div.style.display == 'none' ? 'block' : 'none'}catch{}">
+                            <span><span id="numberOfPassenger"></span><span style="padding-right: 16px">&nbsp;Passenger</span></span>
+                            <div id="passengerSelection" class="select-css" style="margin-right: 0; margin-left: 0">
+                                <div>
+                                    <input required="" id="adultSelection" name="adultSelection" value="1" maxlength="1">
+                                    <label for="adultSelection">Adult</label>
+                                    <span id="addAdult" onclick="if(parseInt(document.getElementById('adultSelection').value, 10)<9)document.getElementById('adultSelection').value = parseInt(document.getElementById('adultSelection').value, 10) + 1;passengerChange();">
+                              +
+                              </span>
+                                    <span id="removeAdult" onclick="if(parseInt(document.getElementById('adultSelection').value, 10)>0) document.getElementById('adultSelection').value = parseInt(document.getElementById('adultSelection').value, 10) - 1;passengerChange();">
+                              –
+                              </span>
+                                </div>
+                                <div>
+                                    <input required="" id="childSelection" name="childSelection" value="0" maxlength="1">
+                                    <label for="childSelection">Child (2-17)</label>
+                                    <span id="addChild" onclick="if(parseInt(document.getElementById('childSelection').value, 10)<9)document.getElementById('childSelection').value = parseInt(document.getElementById('childSelection').value, 10) + 1;passengerChange();">
+                              +
+                              </span>
+                                    <span id="removeChild" onclick="if(parseInt(document.getElementById('childSelection').value, 10)>0) document.getElementById('childSelection').value = parseInt(document.getElementById('childSelection').value, 10) - 1;passengerChange();">
+                              –
+                              </span>
+                                </div>
+                                <div>
+                                    <input required="" id="toddlerSelection" name="toddlerSelection" value="0" maxlength="1">
+                                    <label for="toddlerSelection">Toddler (on lap)</label>
+                                    <span id="addToddler" onclick="if(parseInt(document.getElementById('toddlerSelection').value, 10)<9)document.getElementById('toddlerSelection').value = parseInt(document.getElementById('toddlerSelection').value, 10) + 1;passengerChange();">
+                              +
+                              </span>
+                                    <span id="removeToddler" onclick="if(parseInt(document.getElementById('toddlerSelection').value, 10)>0) document.getElementById('toddlerSelection').value = parseInt(document.getElementById('toddlerSelection').value, 10) - 1">
+                              –
+                              </span>
+                                </div>
+                            </div>
+                        </div>
+                        <select name="price" style="font-size: 16px; margin: 0 20px -23.76px 0; height: min-content" class="select-css">
+                        <option value="economy">Economy  &nbsp;&nbsp;</option>
+                        <option value="firstClass">Comfort+  &nbsp;&nbsp;</option>
+                     </select>
+                        <datalist id="airports"></datalist>
+                        <datalist id="airports2"></datalist>
+                        <datalist id="airports3"></datalist>
+                        <template id="airportsTemplate">
+                        <option value="Akron, OH (CAK)">Akron, OH (CAK)</option>
+                        <option value="Albany, NY (ALB)">Albany, NY (ALB)</option>
+                        <option value="Allentown, PA (ABE)">Allentown, PA (ABE)</option>
+                        <option value="Atlantic City, NJ (ACY)">Atlantic City, NJ (ACY)</option>
+                        <option value="Baltimore, MD (BWI)">Baltimore, MD (BWI)</option>
+                        <option value="Binghamton, NY (BGM)">Binghamton, NY (BGM)</option>
+                        <option value="Buffalo, NY (BUF)">Buffalo, NY (BUF)</option>
+                        <option value="Charleston, WV (CRW)">Charleston, WV (CRW)</option>
+                        <option value="Cincinnati, OH (LUK)">Cincinnati, OH (LUK)</option>
+                        <option value="Clarksburg, WV (CKB)">Clarksburg, WV (CKB)</option>
+                        <option value="Cleveland, OH (CLE)">Cleveland, OH (CLE)</option>
+                        <option value="Columbus, OH (CMH)">Columbus, OH (CMH)</option>
+                        <option value="Columbus, OH (LCK)">Columbus, OH (LCK)</option>
+                        <option value="Dayton, OH (DAY)">Dayton, OH (DAY)</option>
+                        <option value="Elmira, NY (ELM)">Elmira, NY (ELM)</option>
+                        <option value="Erie, PA (ERI)">Erie, PA (ERI)</option>
+                        <option value="Farmingdale, NY (FRG)">Farmingdale, NY (FRG)</option>
+                        <option value="Hagerstown, MD (HGR)">Hagerstown, MD (HGR)</option>
+                        <option value="Harrisburg, PA (MDT)">Harrisburg, PA (MDT)</option>
+                        <option value="Huntington, WV (HTS)">Huntington, WV (HTS)</option>
+                        <option value="Islip, NY (ISP)">Islip, NY (ISP)</option>
+                        <option value="Ithaca, NY (ITH)">Ithaca, NY (ITH)</option>
+                        <option value="Latrobe, PA (LBE)">Latrobe, PA (LBE)</option>
+                        <option value="Morgantown, WV (MGW)">Morgantown, WV (MGW)</option>
+                        <option value="New York / Newark, NJ (EWR)">New York / Newark, NJ (EWR)</option>
+                        <option value="New York, NY (JFK)">New York, NY (JFK)</option>
+                        <option value="New York, NY (LGA)">New York, NY (LGA)</option>
+                        <option value="Newburgh, NY (SWF)">Newburgh, NY (SWF)</option>
+                        <option value="Niagara Falls, NY (IAG)">Niagara Falls, NY (IAG)</option>
+                        <option value="Philadelphia, PA (PHL)">Philadelphia, PA (PHL)</option>
+                        <option value="Pittsburg, PA (PIT)">Pittsburg, PA (PIT)</option>
+                        <option value="Plattsburgh, NY (PBG)">Plattsburgh, NY (PBG)</option>
+                        <option value="Rochester, NY (ROC)">Rochester, NY (ROC)</option>
+                        <option value="Salisbury, MD (SBY)">Salisbury, MD (SBY)</option>
+                        <option value="State College, PA (SCE)">State College, PA (SCE)</option>
+                        <option value="Syracuse, NY (SYR)">Syracuse, NY (SYR)</option>
+                        <option value="Toledo, OH (TOL)">Toledo, OH (TOL)</option>
+                        <option value="Trenton, NJ (TTN)">Trenton, NJ (TTN)</option>
+                        <option value="Watertown, NY (ART)">Watertown, NY (ART)</option>
+                        <option value="White Plains, NY (HPN)">White Plains, NY (HPN)</option>
+                        <option value="Wilkes-Barre, PA (AVP)">Wilkes-Barre, PA (AVP)</option>
+                        <option value="Williamsport, PA (IPT)">Williamsport, PA (IPT)</option>
+                        <option value="Wilmington, DE (ILG)">Wilmington, DE (ILG)</option>
+                        <option value="Youngstown, OH (YNG)">Youngstown, OH (YNG)</option>
+                     </template>
+                        <input type="submit" id="bookbutton" class="mainButton ghostButton" value="Find Flights" style="height: 41.9px; align-self: center; margin-bottom: -23.76px; margin-right: 0; margin-left: auto;">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="step1" style="margin: 0 auto; max-width: 1000px; padding: 20px" class="animated faster">
+            <div style="padding: 20px; background: #FCF0EC; border: 1px solid #ddd; border-top: 3px solid crimson; display: none" id="errorContainer">
+                <span style="font-family: Open Sans; font-weight: bold">Error:</span>
+                <ul id="errorContent" style="margin-top: 20px">
+                </ul>
+            </div>
+            <div style="font-family: Open Sans; font-size: 25px; margin-top: 20px"><span>Select Departure Flight:</span><span id="departurePlace" style="font-size: 18px; color: #5f6368; margin: 0; float: right"></span></div>
+            <div class="calendar-container" id="departureCalendar">
+                <div class="calendar-item" onclick="selectDay(this)">
+                    <div></div>
+                    <div style="margin-top: 10px; font-weight: bold"></div>
+                </div>
+                <div class="calendar-item" onclick="selectDay(this)">
+                    <div></div>
+                    <div style="margin-top: 10px; font-weight: bold"></div>
+                </div>
+                <div class="calendar-item" onclick="selectDay(this)">
+                    <div></div>
+                    <div style="margin-top: 10px; font-weight: bold"></div>
+                </div>
+                <div class="calendar-item" onclick="selectDay(this)" selected="true">
+                    <div></div>
+                    <div style="margin-top: 10px; font-weight: bold"></div>
+                </div>
+                <div class="calendar-item" onclick="selectDay(this)">
+                    <div></div>
+                    <div style="margin-top: 10px; font-weight: bold"></div>
+                </div>
+                <div class="calendar-item" onclick="selectDay(this)">
+                    <div></div>
+                    <div style="margin-top: 10px; font-weight: bold"></div>
+                </div>
+                <div class="calendar-item" onclick="selectDay(this)">
+                    <div></div>
+                    <div style="margin-top: 10px; font-weight: bold"></div>
+                </div>
+            </div>
+            <div style="width: 100%;">
+                <table id="departureSelection" class="selectionTable">
+                    <tr>
+                        <td>5:00 AM — 6:00 AM</td>
+                        <td>1h 32m</td>
+                        <td>Nonstop</td>
+                        <td style="text-align: right">
+                            <input type="radio" name="departure-group" id="departure1" onchange="selectFlight(this)">
+                            <label for="departure1">$123</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5:00 AM — 6:00 AM</td>
+                        <td>1h 32m</td>
+                        <td>Nonstop</td>
+                        <td style="text-align: right">
+                            <input type="radio" name="departure-group" id="departure2" onchange="selectFlight(this)">
+                            <label for="departure2">$123</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5:00 AM — 6:00 AM</td>
+                        <td>1h 32m</td>
+                        <td>Nonstop</td>
+                        <td style="text-align: right">
+                            <input type="radio" name="departure-group" id="departure3" onchange="selectFlight(this)">
+                            <label for="departure3">$123</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <button class="mainButton" style="margin-top: 40px; font-size: 20px; margin-right: 0; vertical-align: middle;" onclick="nextStep(this)" id="continue" disabled>
+               <span style="vertical-align: middle;">Continue</span>
+               <svg style="vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0z" fill="none"/><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+            </button>
+        </div>
+        <div id="step2" style="margin: 0 auto; max-width: 1000px; padding: 20px; display: none" class="animated faster">
+            <div style="font-family: Open Sans; font-size: 25px; margin-top: 20px"><span>Select Return Flight:</span><span id="returnPlace" style="font-size: 18px; color: #5f6368; margin: 0; float: right"></span></div>
+            <div class="calendar-container" id="returnCalendar">
+                <div class="calendar-item" onclick="selectDay2(this)">
+                    <div></div>
+                    <div style="margin-top: 10px; font-weight: bold"></div>
+                </div>
+                <div class="calendar-item" onclick="selectDay2(this)">
+                    <div></div>
+                    <div style="margin-top: 10px; font-weight: bold"></div>
+                </div>
+                <div class="calendar-item" onclick="selectDay2(this)">
+                    <div></div>
+                    <div style="margin-top: 10px; font-weight: bold"></div>
+                </div>
+                <div class="calendar-item" onclick="selectDay2(this)" selected="true">
+                    <div></div>
+                    <div style="margin-top: 10px; font-weight: bold"></div>
+                </div>
+                <div class="calendar-item" onclick="selectDay2(this)">
+                    <div></div>
+                    <div style="margin-top: 10px; font-weight: bold"></div>
+                </div>
+                <div class="calendar-item" onclick="selectDay2(this)">
+                    <div></div>
+                    <div style="margin-top: 10px; font-weight: bold"></div>
+                </div>
+                <div class="calendar-item" onclick="selectDay2(this)">
+                    <div></div>
+                    <div style="margin-top: 10px; font-weight: bold"></div>
+                </div>
+            </div>
+            <div style="width: 100%;">
+                <table id="returnSelection" class="selectionTable">
+                    <tr>
+                        <td>5:00 AM — 6:00 AM</td>
+                        <td>1h 32m</td>
+                        <td>Nonstop</td>
+                        <td style="text-align: right">
+                            <input type="radio" name="return-group" id="return1" onchange="selectFlight2(this)">
+                            <label for="return1">$123</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5:00 AM — 6:00 AM</td>
+                        <td>1h 32m</td>
+                        <td>Nonstop</td>
+                        <td style="text-align: right">
+                            <input type="radio" name="return-group" id="return2" onchange="selectFlight2(this)">
+                            <label for="return2">$123</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5:00 AM — 6:00 AM</td>
+                        <td>1h 32m</td>
+                        <td>Nonstop</td>
+                        <td style="text-align: right">
+                            <input type="radio" name="return-group" id="return3" onchange="selectFlight2(this)">
+                            <label for="return3">$123</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div style="display: flex; margin-top: 40px">
+                <button class="mainButton" style="font-size: 20px; margin-left: 0" onclick="goBack(this)">
+                  <svg style="vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M0 0h24v24H0z" fill="none"/><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                  <span style="vertical-align: middle;">Go Back</span>
+               </button>
+                <button class="mainButton" style="font-size: 20px; margin-right: 0; vertical-align: middle;" onclick="nextStep2(this)" id="continue2" disabled>
+                  <span style="vertical-align: middle;">Continue</span>
+                  <svg style="vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0z" fill="none"/><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+               </button>
+            </div>
+        </div>
+        <div id="step3" style="margin: 0 auto; max-width: 1000px; padding: 20px; display: none" class="animated faster">
+            <div style="padding: 20px 0; margin-top: 10px">
+                <div style="font-family: Open Sans; font-size: 25px; margin-right: 20px">Carry-On Bags: <span style="color: #5f6368; font-size: 16px; margin-top: 5px">1 included per passenger, maximum size 22 in long, 14 in wide and 8 in deep</span></div>
+
+                <div style="display: flex; align-items: center; margin-top: 20px;">
+                    <div style="display: flex">
+                        <div style="border-bottom-right-radius: 0; border-top-right-radius: 0" class="input-stepper" onclick="if(+document.getElementById('carry-on-bag').getAttribute('value') != 0){var x = +document.getElementById('carry-on-bag').getAttribute('value') - 1; document.getElementById('carry-on-bag').setAttribute('value', x);document.getElementsByName('addBag')[0].style.fill = '#004ae1'; if (+document.getElementById('carry-on-cost').innerHTML != 0) {document.getElementById('carry-on-cost').innerHTML = +document.getElementById('carry-on-cost').innerHTML - 28;}}if(+document.getElementById('carry-on-bag').getAttribute('value') == 0){document.getElementsByName('removeBag')[0].style.fill = '#aaa'}">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" name="removeBag" fill="#004ae1">
+                           <path d="M19 13H5v-2h14v2z"/>
+                           <path d="M0 0h24v24H0z" fill="none"/>
+                        </svg>
+                        </div>
+                        <input id="carry-on-bag" type="number" value="1" min="0" max="4" style="line-height: 1.3; padding: .6em .8em; border: 1px solid #ddd; border-radius: 0; width: 25px; text-align: center;font-size: 16px;font-family: Open Sans;">
+                        <div style="border-bottom-left-radius: 0; border-top-left-radius: 0;" class="input-stepper" onclick="if(+document.getElementById('carry-on-bag').getAttribute('value') != 4){var x = +document.getElementById('carry-on-bag').getAttribute('value') + 1; document.getElementById('carry-on-bag').setAttribute('value', x);document.getElementsByName('removeBag')[0].style.fill = '#004ae1'; if(document.getElementById('carry-on-bag').getAttribute('value') > 1){ document.getElementById('carry-on-cost').innerHTML = +document.getElementById('carry-on-cost').innerHTML + 28;}}if(+document.getElementById('carry-on-bag').getAttribute('value') == 4){document.getElementsByName('addBag')[0].style.fill = '#aaa'}">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" name="addBag" fill="#004ae1">
+                           <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                           <path d="M0 0h24v24H0z" fill="none"/>
+                        </svg>
+                        </div>
+                    </div>
+                    <div style="font-size: 24px; margin: 0 40px; margin-left: 20px">Cost: $<span id="carry-on-cost">0</span></div>
+                </div>
+            </div>
+
+            <div style="padding: 20px 0; margin-top: 10px">
+                <div style="font-family: Open Sans; font-size: 25px; margin-right: 20px">Checked Bags: <span style="color: #5f6368; font-size: 16px; margin-top: 5px">Weight limit of 50 lbs, maximum of 62 linear inches (length + width + height)</span></div>
+                <div style="margin-top: 20px; display: flex">
+                    <div style="border-bottom-right-radius: 0; border-top-right-radius: 0" class="input-stepper" onclick="if(+document.getElementById('checked-bag').getAttribute('value') != 0){var x = +document.getElementById('checked-bag').getAttribute('value') - 1; document.getElementById('checked-bag').setAttribute('value', x);document.getElementsByName('addBag')[1].style.fill = '#004ae1'; document.getElementById('checked-cost').innerHTML = +document.getElementById('checked-cost').innerHTML - 36;}if(+document.getElementById('checked-bag').getAttribute('value') == 0){document.getElementsByName('removeBag')[1].style.fill = '#aaa'}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" name="removeBag" fill="#aaa">
+                        <path d="M19 13H5v-2h14v2z"/>
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                     </svg>
+                    </div>
+                    <input id="checked-bag" type="number" value="0" min="0" max="4" style="line-height: 1.3; padding: .6em .8em; border: 1px solid #ddd; border-radius: 0; width: 25px; text-align: center;font-size: 16px;font-family: Open Sans;">
+                    <div style="border-bottom-left-radius: 0; border-top-left-radius: 0;" class="input-stepper" onclick="if(+document.getElementById('checked-bag').getAttribute('value') != 4){var x = +document.getElementById('checked-bag').getAttribute('value') + 1; document.getElementById('checked-bag').setAttribute('value', x);document.getElementsByName('removeBag')[1].style.fill = '#004ae1'; document.getElementById('checked-cost').innerHTML = +document.getElementById('checked-cost').innerHTML + 36;}if(+document.getElementById('checked-bag').getAttribute('value') == 4){document.getElementsByName('addBag')[1].style.fill = '#aaa'}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" name="addBag" fill="#004ae1">
+                        <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                     </svg>
+                    </div>
+                    <div style="font-size: 24px; margin: 0 40px; margin-left: 20px">Cost: $<span id="checked-cost">0</span></div>
+                </div>
+            </div>
+
+            <div style="padding: 20px 0; margin-top: 10px; margin-bottom: 40px">
+                <div style="font-family: Open Sans; font-size: 25px; margin-right: 20px">Personal Item: <span style="color: #5f6368; font-size: 16px; margin-top: 5px">1 included per passenger, maximum dimensions 9 inches x 10 inches x 17 inches</span></div>
+            </div>
+
+            <hr style="margin-bottom: 40px">
+
+            <div style="font-family: Open Sans; font-size: 25px">
+                <span>Select Seat(s):</span>
+            </div>
+
+            <div style="display: flex; justify-content: center; user-select: none; ">
+                <div style="border: 1px solid #aaa;border-radius: 5px; margin-top: 20px; width: fit-content;" id="seat-map">
+                    <div class="grid-container2" style="margin: 0; padding: 0">
+                        <div class="grid-item" style="border: none; background: none">A</div>
+                        <div class="grid-item" style="border: none; background: none">B</div>
+                        <div class="grid-item" style="border: none; background: none">C</div>
+                        <div class="grid-item" style="border: none; width: calc(100% - 30px); background: none; height: calc(100% - 30px)">
+                            <div>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="grid-item" style="border: none; background: none">D</div>
+                        <div class="grid-item" style="border: none; background: none">E</div>
+                        <div class="grid-item" style="border: none; background: none">F</div>
+                    </div>
+                    <div class="grid-container" style="margin-top: 0">
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" style="border: none; background: none;">
+                            3
+                        </div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" style="border: none; background: none;">
+                            <div>
+                                <span>4</span>
+                            </div>
+                        </div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" style="border: none; background: none;">
+                            <div>
+                                <span>5</span>
+                            </div>
+                        </div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" style="border: none; background: none;">
+                            <div>
+                                <span>6</span>
+                            </div>
+                        </div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                    </div>
+
+                    <div class="grid-container2">
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" style="border: none; width: calc(100% - 30px); background: none; height: calc(100% - 30px)">
+                            <div>
+                                <span>7</span>
+                            </div>
+                        </div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" style="border: none; width: calc(100% - 30px); background: none; height: calc(100% - 30px)">
+                            <div>
+                                <span>8</span>
+                            </div>
+                        </div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" style="border: none; width: calc(100% - 30px); background: none; height: calc(100% - 30px)">
+                            <div>
+                                <span>9</span>
+                            </div>
+                        </div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" style="border: none; width: calc(100% - 30px); background: none; height: calc(100% - 30px)">
+                            <div>
+                                <span>10</span>
+                            </div>
+                        </div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" style="border: none; width: calc(100% - 30px); background: none; height: calc(100% - 30px)">
+                            <div>
+                                <span>11</span>
+                            </div>
+                        </div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" style="border: none; width: calc(100% - 30px); background: none; height: calc(100% - 30px)">
+                            <div>
+                                <span>12</span>
+                            </div>
+                        </div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" style="border: none; width: calc(100% - 30px); background: none; height: calc(100% - 30px)">
+                            <div>
+                                <span>13</span>
+                            </div>
+                        </div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                    </div>
+
+                    <div class="grid-container2">
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" style="border: none; width: calc(100% - 30px); background: none; height: calc(100% - 30px)">
+                            <div>
+                                <span>14</span>
+                            </div>
+                        </div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" style="border: none; width: calc(100% - 30px); background: none; height: calc(100% - 30px)">
+                            <div>
+                                <span>15</span>
+                            </div>
+                        </div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                    </div>
+
+                    <div class="grid-container2">
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" style="border: none; width: calc(100% - 30px); background: none; height: calc(100% - 30px)">
+                            <div>
+                                <span>16</span>
+                            </div>
+                        </div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" style="border: none; width: calc(100% - 30px); background: none; height: calc(100% - 30px)">
+                            <div>
+                                <span>17</span>
+                            </div>
+                        </div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" style="border: none; width: calc(100% - 30px); background: none; height: calc(100% - 30px)">
+                            <div>
+                                <span>18</span>
+                            </div>
+                        </div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" style="border: none; width: calc(100% - 30px); background: none; height: calc(100% - 30px)">
+                            <div>
+                                <span>19</span>
+                            </div>
+                        </div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" style="border: none; width: calc(100% - 30px); background: none; height: calc(100% - 30px)">
+                            <div>
+                                <span>20</span>
+                            </div>
+                        </div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" style="border: none; width: calc(100% - 30px); background: none; height: calc(100% - 30px)">
+                            <div>
+                                <span>21</span>
+                            </div>
+                        </div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" style="border: none; width: calc(100% - 30px); background: none; height: calc(100% - 30px)">
+                            <div>
+                                <span>22</span>
+                            </div>
+                        </div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" style="border: none; width: calc(100% - 30px); background: none; height: calc(100% - 30px)">
+                            <div>
+                                <span>23</span>
+                            </div>
+                        </div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" style="border: none; width: calc(100% - 30px); background: none; height: calc(100% - 30px)">
+                            <div>
+                                <span>24</span>
+                            </div>
+                        </div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" style="border: none; width: calc(100% - 30px); background: none; height: calc(100% - 30px)">
+                            <div>
+                                <span>25</span>
+                            </div>
+                        </div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" style="border: none; width: calc(100% - 30px); background: none; height: calc(100% - 30px)">
+                            <div>
+                                <span>26</span>
+                            </div>
+                        </div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" style="border: none; width: calc(100% - 30px); background: none; height: calc(100% - 30px)">
+                            <div>
+                                <span>27</span>
+                            </div>
+                        </div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" style="border: none; width: calc(100% - 30px); background: none; height: calc(100% - 30px)">
+                            <div>
+                                <span>28</span>
+                            </div>
+                        </div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" style="border: none; width: calc(100% - 30px); background: none; height: calc(100% - 30px)">
+                            <div>
+                                <span>29</span>
+                            </div>
+                        </div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" style="border: none; width: calc(100% - 30px); background: none; height: calc(100% - 30px)">
+                            <div>
+                                <span>30</span>
+                            </div>
+                        </div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                        <div class="grid-item" onclick="selectPassenger(this)"></div>
+                    </div>
+                </div>
+                <div style="margin-top: 20px; margin-left: 20px; display: flex; flex-direction: column; font-size: 16px; font-family: Open Sans; line-height: 2; position: fixed; right: 0">
+                    <div>Legend:</div>
+                    <div style="display: flex; align-items: center">
+                        <div style="width: 20px; height: 20px; border: #000; background: #EAB64C; margin-right: 5px"></div> Comfort+ ($35)</div>
+                    <div style="display: flex; align-items: center">
+                        <div style="width: 20px; height: 20px; border: #000; background: #5B91FF; margin-right: 5px"></div> Economy ($0)</div>
+                    <div style="display: flex; align-items: center">
+                        <div style="width: 20px; height: 20px; border: #000; background: #f0f0f0; margin-right: 5px"></div> Unavailable</div>
+                </div>
+            </div>
+
+            <div style="display: flex; margin-top: 40px">
+                <button class="mainButton" style="font-size: 20px; margin-left: 0" onclick="goBack(this)">
+                  <svg style="vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M0 0h24v24H0z" fill="none"/><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                  <span style="vertical-align: middle;">Go Back</span>
+               </button>
+                <button class="mainButton" style="font-size: 20px; margin-right: 0; vertical-align: middle;" onclick="nextStep3(this)" id="continue3" disabled>
+                  <span style="vertical-align: middle;">Continue</span>
+                  <svg style="vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0z" fill="none"/><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+               </button>
+            </div>
+        </div>
+        <div id="step4" style="margin: 0 auto; max-width: 1000px; padding: 20px; display: none" class="animated faster">
+            <div style="font-family: Open Sans; font-size: 25px">
+                <span>Checkout:</span>
+            </div>
+            <div style="font-family: Open Sans; font-size: 16px">
+                <div style="margin-top: 20px">Thank you for booking with Astra Airlines! Your ticket number is DF87G3</div>
+                <div style="margin-bottom: 20px">Your ticket is held in our systems; you will not recieve a paper ticket for your booking.Please press the confirm button, once the page refreshes,your ticket has been booked. If there are any questions please email us.</div>
+                <div style="display: grid; grid-template-columns: auto auto; width: fit-content; padding: 20px; margin: 60px auto" id="e-ticket">
+                    <div>From:</div>
+                    <div></div>
+                    <div>To:</div>
+                    <div></div>
+                    <div>Departure Date:</div>
+                    <div></div>
+                    <div>Return Date:</div>
+                    <div></div>
+                    <div>Adult Passenger(s):</div>
+                    <div></div>
+                    <div>Child Passenger(s):</div>
+                    <div></div>
+                    <div>Toddler Passenger(s):</div>
+                    <div></div>
+                    <div>Total:</div>
+                    <div></div>
+                </div>
+
+                <button style="margin-top: 32px" class="mainButton" onClick="window.location.reload();">Confirm</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="contain">
+                <div class="col">
+                    <h1>Reservations</h1>
+                    <ul>
+                        <li><a tabindex="0" href="../reservations/book-a-flight.html">Book a Flight</a></li>
+                        <li><a tabindex="0" href="../reservations/where-we-fly.html">Where We Fly</a></li>
+
+                    </ul>
+                </div>
+                <div class="col">
+                    <h1>Travel Information</h1>
+                    <ul>
+                        <li><a href="../travel-information/check-in.html">Check-In</a></li>
+                        <li><a href="../travel-information/manage-flights.html">Manage Flight</a></li>
+                        <li><a href="../travel-information/flight-status.html">Flight Status</a></li>
+                        <li><a href="../travel-information/policies.html">Policies</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h1>AstraPlus</h1>
+                    <ul>
+                        <li><a href="../AstraPlus/membership.html">Membership</a></li>
+                        <li><a href="../AstraPlus/upgrades.html">Upgrades</a></li>
+
+                    </ul>
+                </div>
+                <div class="col">
+                    <h1>Other</h1>
+                    <ul>
+
+                        <li><a href="../careers.html">Careers</a></li>
+                        <li><a href="../credit.html" style="border: solid 1px white; padding: 0 5px">CREDIT</a></li>
+                    </ul>
+                </div>
+                <div class="col social">
+                    <h1>
+                        Social
+                        <svg style="width: 24px; vertical-align: middle; margin-top: -4px" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#fff">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                     </svg>
+                    </h1>
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank">
+                                <svg style="height: 24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                              <path fill="currentColor" d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z" class=""></path>
+                           </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/" target="_blank">
+                                <svg style="height: 24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                              <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" class=""></path>
+                           </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.twitter.com/" target="_blank">
+                                <svg style="height: 24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                              <path fill="currentColor" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z" class=""></path>
+                           </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/" target="_blank">
+                                <svg style="height: 24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                              <path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" class=""></path>
+                           </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                    pageLanguage: 'en'
+                },
+                'google_translate_element'
+            );
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    </script>
+    <link rel="stylesheet" href="../animate.css">
+    <script type="text/javascript" src="../wow.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script async type="text/javascript" src="https://userlike-cdn-widgets.s3-eu-west-1.amazonaws.com/c621f009e590e812a678b1a0f9317cb43f246b5ea23241aa988b921188c1297c.js"></script>
+</body>
+
+
+
+</html>
