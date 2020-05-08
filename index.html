@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Home | Astra Airlines</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans:300,400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+    <script>
+        $(function() {
+            $("#datepicker").datepicker();
+        });
+    </script>
+
+    <script>
+        $(function() {
+            $("#datepicker2").datepicker();
+        });
+    </script>
+
+    <div id="overlay" onclick="document.documentElement.style.overflow = 'auto'; document.getElementById('overlay').style.display = 'none'; document.getElementById('overlay').style.width = '0'; document.getElementById('hamburger-menu').style.display = 'none'; document.getElementById('hamburger-menu').style.width = '0'"
+        onfocus="document.documentElement.style.overflow = 'auto';document.getElementById('overlay').style.display = 'none'; document.getElementById('overlay').style.width = '0'; document.getElementById('hamburger-menu').style.display = 'none'; document.getElementById('hamburger-menu').style.width = '0'"></div>
+    <a id="top"></a>
+    <header id="header">
+        <a id="skip-to-content" href="#main">Skip to Content</a>
+        <div id="topnav" role="navigation">
+            <div class="nav" id="hamburger-icon" style="display: none; padding: 0 20px" tabindex="0" onclick="document.documentElement.style.overflow = 'hidden'; document.getElementById('overlay').style.display = 'block'; document.getElementById('overlay').style.width = '100%'; document.getElementById('hamburger-menu').style.display = 'inherit'; document.getElementById('hamburger-menu').style.width = 'auto'"
+                onfocus="document.documentElement.style.overflow = 'hidden'; document.getElementById('overlay').style.display = 'block'; document.getElementById('overlay').style.width = '100%'; document.getElementById('hamburger-menu').style.display = 'inherit'; document.getElementById('hamburger-menu').style.width = 'auto'">
+                <div style="outline: none" class="dropdown">
+                    <span class="dropdown-icon">
+                     <svg viewBox="0 0 24 24" width="24px" height="24px" fill="#5f6368">
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+                     </svg>
+                  </span>
+                </div>
+            </div>
+            <div id="hamburger-menu" style="width: 0; display: none; cursor: default">
+                <div id="hamburger-content" style="display: flex; flex-direction: column">
+                    <div style="display: flex">
+                        <div class="nav" id="hamburger-close" style="display: none; padding: 0 35px 2px 35px; border-bottom: 1px solid #aaa" tabindex="0" onclick="document.documentElement.style.overflow = 'auto'; document.getElementById('overlay').style.display = 'none'; document.getElementById('overlay').style.width = '0'; document.getElementById('hamburger-menu').style.display = 'none'; document.getElementById('hamburger-menu').style.width = '0'"
+                            onfocus="document.documentElement.style.overflow = 'auto';document.getElementById('overlay').style.display = 'none'; document.getElementById('overlay').style.width = '0'; document.getElementById('hamburger-menu').style.display = 'none'; document.getElementById('hamburger-menu').style.width = '0'">
+                            <div style="outline: none" class="dropdown">
+                                <span class="dropdown-icon" style="padding-left: 0 !important">
+                         
+                              <svg viewBox="0 0 24 24" width="24px" height="24px" fill="#5f6368" style="margin-top: -1px;">
+                                 <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                 <path d="M0 0h24v24H0z" fill="none"/>
+                              </svg>
+                      
+                           </span>
+                            </div>
+                        </div>
+                        <a id="logo-div" href="../index.html" role="banner" style="border-bottom: 1px solid black">
+                            <img src="../img/logo2.png" alt="Astra airlines logo">
+                        </a>
+
+                    </div>
+                    <details>
+                        <summary class="dropdown hamburger-title" style="justify-content: left">Reservations</summary>
+                        <ul class="hamburger-dropdown">
+                            <li><a tabindex="0" href="reservations/book-a-flight.html">Book a Flight</a></li>
+                            <li><a tabindex="0" href="reservations/where-we-fly.html">Where We Fly</a></li>
+
+                        </ul>
+                    </details>
+                    <details>
+                        <summary class="dropdown hamburger-title" style="justify-content: left">Travel Information</summary>
+                        <ul class="hamburger-dropdown">
+                            <li><a tabindex="0" href="travel-information/check-in.html">Check-In</a></li>
+                            <li><a tabindex="0" href="travel-information/manage-flights.html">Manage Flight</a></li>
+                            <li><a tabindex="0" href="travel-information/flight-status.html">Flight Status</a></li>
+                            <li><a tabindex="0" href="travel-information/policies.html">Policies</a></li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary class="dropdown hamburger-title" style="justify-content: left">AstraPlus</summary>
+                        <ul class="hamburger-dropdown">
+                            <li><a tabindex="0" href="AstraPlus/membership.html">Membership</a></li>
+                            <li><a tabindex="0" href="AstraPlus/upgrades.html">Upgrades</a></li>
+
+
+                        </ul>
+                    </details>
+                    <details>
+                        <summary class="dropdown hamburger-title" style="justify-content: left">More</summary>
+                        <ul class="hamburger-dropdown">
+                            <li><a tabindex="0" href="contact.html">Contact</a></li>
+
+                            <li><a tabindex="0" href="careers.html">Careers</a></li>
+
+
+
+
+                        </ul>
+                    </details>
+
+
+                    <div class="nav" tabindex="0" style="width: 100%">
+                        <a class="dropdown" tabindex="-1" style="width: 100%; justify-content: start" class="hamburger-link">
+
+                            </>
+
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+            <a id="logo-div" href="index.html" role="banner">
+                <img src="img/logo2.png" alt="Astra Airlines logo">
+            </a>
+            <div id="hamburger-collapse">
+                <details class="nav" onmouseover='this.setAttribute("open", "true");' onmouseleave='this.setAttribute("open", "false");'>
+                    <summary class="dropdown" style="padding: 20px 20px">Reservations</summary>
+
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><a tabindex="0" href="reservations/book-a-flight.html">Book a Flight</a></li>
+                            <li><a tabindex="0" href="reservations/where-we-fly.html">Where We Fly</a></li>
+
+                        </ul>
+                    </div>
+                </details>
+                <details class="nav" onmouseover='this.setAttribute("open", "true");' onmouseleave='this.setAttribute("open", "false");'>
+                    <summary class="dropdown" style="padding: 20px 20px">Travel Information</summary>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><a tabindex="0" href="travel-information/check-in.html">Check-In</a></li>
+                            <li><a tabindex="0" href="travel-information/manage-flights.html">Manage Flight</a></li>
+                            <li><a tabindex="0" href="travel-information/flight-status.html">Flight Status</a></li>
+                            <li><a tabindex="0" href="travel-information/policies.html">Policies</a></li>
+                        </ul>
+                    </div>
+                </details>
+                <details class="nav" onmouseover='this.setAttribute("open", "true");' onmouseleave='this.setAttribute("open", "false");'>
+                    <summary class="dropdown" style="padding: 20px 20px">AstraPlus</summary>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><a tabindex="0" href="AstraPlus/membership.html">Membership</a></li>
+                            <li><a tabindex="0" href="AstraPlus/upgrades.html">Upgrades</a></li>
+
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="nav" onmouseover='this.setAttribute("open", "true");' onmouseleave='this.setAttribute("open", "false");'>
+                    <summary class="dropdown" style="padding: 20px 20px">More</summary>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><a tabindex="0" href="careers.html">Careers</a></li>
+
+
+                            <li><a tabindex="0" href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </details>
+
+
+
+
+
+            </div>
+            <div class="more">
+                <span class="dropdown-icon long-search">
+               <label for="search" class="screenreader">Search Astra Airlines:</label>
+               <input required tabindex="0" type="search" name="search" class="long-search search" placeholder="Search Astra Airlines" onkeydown="search(this)">
+               </span>
+                <span class="dropdown-icon short-search">
+               <label for="search" class="screenreader">Search Astra Airlines:</label>
+               <input required tabindex="0" type="search" name="search" class="search" onfocus="this.placeholder = 'Search Astra Airlines';" onmouseover="this.placeholder = 'Search Astra Airlines';" onmouseleave="this.placeholder = '';" onfocusout="this.placeholder = '';this.value= ''" onkeydown="search(this)">
+               </span>
+                <div id="lang" style="padding: 28px 20px 29px 20px" tabindex="0">
+                    <div style="outline: none; display: inline; border: none" class="dropdown">
+                        <span class="dropdown-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#5f6368" style="margin-bottom: -7px">
+                           <path xmlns="http://www.w3.org/2000/svg" d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/>
+                        </svg>
+                     </span>
+                    </div>
+                    <div class="dropdown-content" style="right:0; top: 79px; padding-left: 20px">
+                        <ul style="margin-left: -20px">
+                            <li>
+                                <a style="cursor: default">
+                                    <div tabindex="0" id="google_translate_element"></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main role="main" id="main">
+        <div id="hero">
+            <div id="main-action" style="z-index: 0">
+                <ul>
+                    <li class="nav-tab" onclick="clearSelect(); this.toggleAttribute('selected'); document.getElementById('book').style.display= 'block'" selected>
+                        <div style="flex-wrap: nowrap; display: flex; align-items: center; justify-content: center;">
+                            <span class="text-icon" style="width: 18px; height: 18px">
+                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#5f6368">
+                              <path d="M0 0h24v24H0z" fill="none"/>
+                              <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
+                           </svg>
+                        </span>
+                            <span class="text-icon" style="margin-left: 4px">Book</span>
+                        </div>
+                    </li>
+                    <li class="nav-tab" onclick="clearSelect(); this.toggleAttribute('selected'); document.getElementById('manage').style.display= 'block'">
+                        <div style="flex-wrap: nowrap; display: flex; align-items: center; justify-content: center;">
+                            <span class="text-icon" style="width: 18px; height: 18px">
+                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#5f6368">
+                              <path d="M0 0h24v24H0z" fill="none"/>
+                              <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
+                           </svg>
+                        </span>
+                            <span class="text-icon" style="margin-left: 4px">Manage</span>
+                        </div>
+                    </li>
+                    <li class="nav-tab" onclick="clearSelect(); this.toggleAttribute('selected'); document.getElementById('check-in').style.display= 'block'">
+                        <div style="flex-wrap: nowrap; display: flex; align-items: center; justify-content: center;">
+                            <span class="text-icon" style="width: 18px; height: 18px">
+                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#5f6368">
+                              <path d="M0 0h24v24H0z" fill="none"/>
+                              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                           </svg>
+                        </span>
+                            <span class="text-icon" style="margin-left: 4px">Check-In</span>
+                        </div>
+                    </li>
+                    <li class="nav-tab" onclick="clearSelect(); this.toggleAttribute('selected'); document.getElementById('flight-status').style.display= 'block'">
+                        <div style="flex-wrap: nowrap; display: flex; align-items: center; justify-content: center;">
+                            <span class="text-icon" style="width: 18px; height: 18px">
+                           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" fill="#5f6368">
+                              <defs>
+                                 <path id="a" d="M0 0h24v24H0V0z"/>
+                              </defs>
+                              <clipPath id="b">
+                                 <use xlink:href="#a" overflow="visible"/>
+                              </clipPath>
+                              <path d="M2.5 19h19v2h-19zm19.57-9.36c-.21-.8-1.04-1.28-1.84-1.06L14.92 10l-6.9-6.43-1.93.51 4.14 7.17-4.97 1.33-1.97-1.54-1.45.39 1.82 3.16.77 1.33 1.6-.43 5.31-1.42 4.35-1.16L21 11.49c.81-.23 1.28-1.05 1.07-1.85z" clip-path="url(#b)"/>
+                              <path clip-path="url(#b)" fill="none" d="M0 0h24v24H0V0z"/>
+                           </svg>
+                        </span>
+                            <span class="text-icon" style="margin-left: 25px">Flight Status</span>
+                        </div>
+                    </li>
+                </ul>
+                <div id="main-content">
+                    <div id="book">
+                        <form style="display: block">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 40px">
+                                <select name="flightType" style="font-size: 16px" class="select-css" onchange="if(this.value == 'oneWay') {document.getElementById('returnDiv').style.visibility = 'hidden'; document.getElementsByName('return')[0].required = false} else {document.getElementById('returnDiv').style.visibility = 'visible'; document.getElementsByName('return')[0].required = true}">
+                              <option value="roundTrip">Round Trip  &nbsp;&nbsp;</option>
+                              <option value="oneWay">One Way‎‎‎  &nbsp;&nbsp;</option>
+                           </select>
+                                <div id="parentPassenger" name="passenger" style="font-size: 16px" class="select-css" tabindex="0" onfocus="try{document.getElementById('#passengerSelection').style.display = div.style.display == 'none' ? 'block' : 'none'}catch{}">
+                                    <span id="numberOfPassenger">1</span> Passenger &nbsp;&nbsp;&nbsp;
+                                    <div id="passengerSelection" class="select-css">
+                                        <div>
+                                            <input required id="adultSelection" name="adultSelection" value="1" maxlength="1"></input>
+                                            <label for="adultSelection">Adult</label>
+                                            <span id="addAdult" onclick="if(parseInt(document.getElementById('adultSelection').value, 10)<9)document.getElementById('adultSelection').value = parseInt(document.getElementById('adultSelection').value, 10) + 1;passengerChange();">
+                                    +
+                                    </span>
+                                            <span id="removeAdult" onclick="if(parseInt(document.getElementById('adultSelection').value, 10)>0) document.getElementById('adultSelection').value = parseInt(document.getElementById('adultSelection').value, 10) - 1;passengerChange();">
+                                    –
+                                    </span>
+                                        </div>
+                                        <div>
+                                            <input required id="childSelection" name="childSelection" value="0" maxlength="1"></input>
+                                            <label for="childSelection">Child (2-17)</label>
+                                            <span id="addChild" onclick="if(parseInt(document.getElementById('childSelection').value, 10)<9)document.getElementById('childSelection').value = parseInt(document.getElementById('childSelection').value, 10) + 1;passengerChange();">
+                                    +
+                                    </span>
+                                            <span id="removeChild" onclick="if(parseInt(document.getElementById('childSelection').value, 10)>0) document.getElementById('childSelection').value = parseInt(document.getElementById('childSelection').value, 10) - 1;passengerChange();">
+                                    –
+                                    </span>
+                                        </div>
+                                        <div>
+                                            <input required id="toddlerSelection" name="toddlerSelection" value="0" maxlength="1"></input>
+                                            <label for="toddlerSelection">Toddler (on lap)</label>
+                                            <span id="addToddler" onclick="if(parseInt(document.getElementById('toddlerSelection').value, 10)<9)document.getElementById('toddlerSelection').value = parseInt(document.getElementById('toddlerSelection').value, 10) + 1;passengerChange();">
+                                    +
+                                    </span>
+                                            <span id="removeToddler" onclick="if(parseInt(document.getElementById('toddlerSelection').value, 10)>0) document.getElementById('toddlerSelection').value = parseInt(document.getElementById('toddlerSelection').value, 10) - 1">
+                                    –
+                                    </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <select name="price" style="font-size: 16px" class="select-css">
+                              <option value="economy">Economy  &nbsp;&nbsp;</option>
+                              <option value="firstClass">Comfort+  &nbsp;&nbsp;</option>
+                           </select>
+                            </div>
+                            <div style="display:flex; justify-content: space-between; margin-bottom: 16px">
+                                <div class="autocomplete">
+                                    <input required class="airportSelection" placeholder=" " list="airports" name="from" autocomplete="off" type="text" id="from" spellcheck="false">
+                                    <span class="floatingSpan">From</span>
+                                </div>
+                                <div class="autocomplete" onclick="var tmp = document.getElementsByName('from')[0].value; document.getElementsByName('from')[0].value = document.getElementsByName('to')[0].value;document.getElementsByName('to')[0].value = tmp">
+                                    <svg id="swap" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#5f6368">
+                                 <path d="M6.99 11L3 15l3.99 4v-3H14v-2H6.99v-3zM21 9l-3.99-4v3H10v2h7.01v3L21 9z"/>
+                                 <path d="M0 0h24v24H0z" fill="none"/>
+                              </svg>
+                                </div>
+                                <div class="autocomplete">
+                                    <input required class="airportSelection" placeholder=" " list="airports2" name="to" autocomplete="off" type="text" id="to" spellcheck="false">
+                                    <span class="floatingSpan">To</span>
+                                </div>
+                                <datalist id="airports"></datalist>
+                                <datalist id="airports2"></datalist>
+                                <datalist id="airports3"></datalist>
+                                <template id="airportsTemplate">
+                              <option value="Akron, OH (CAK)">Akron, OH (CAK)</option>
+                              <option value="Albany, NY (ALB)">Albany, NY (ALB)</option>
+                              <option value="Allentown, PA (ABE)">Allentown, PA (ABE)</option>
+                              <option value="Atlantic City, NJ (ACY)">Atlantic City, NJ (ACY)</option>
+                              <option value="Baltimore, MD (BWI)">Baltimore, MD (BWI)</option>
+                              <option value="Binghamton, NY (BGM)">Binghamton, NY (BGM)</option>
+                              <option value="Buffalo, NY (BUF)">Buffalo, NY (BUF)</option>
+                              <option value="Charleston, WV (CRW)">Charleston, WV (CRW)</option>
+                              <option value="Cincinnati, OH (LUK)">Cincinnati, OH (LUK)</option>
+                              <option value="Clarksburg, WV (CKB)">Clarksburg, WV (CKB)</option>
+                              <option value="Cleveland, OH (CLE)">Cleveland, OH (CLE)</option>
+                              <option value="Columbus, OH (CMH)">Columbus, OH (CMH)</option>
+                              <option value="Columbus, OH (LCK)">Columbus, OH (LCK)</option>
+                              <option value="Dayton, OH (DAY)">Dayton, OH (DAY)</option>
+                              <option value="Elmira, NY (ELM)">Elmira, NY (ELM)</option>
+                              <option value="Erie, PA (ERI)">Erie, PA (ERI)</option>
+                              <option value="Farmingdale, NY (FRG)">Farmingdale, NY (FRG)</option>
+                              <option value="Hagerstown, MD (HGR)">Hagerstown, MD (HGR)</option>
+                              <option value="Harrisburg, PA (MDT)">Harrisburg, PA (MDT)</option>
+                              <option value="Huntington, WV (HTS)">Huntington, WV (HTS)</option>
+                              <option value="Islip, NY (ISP)">Islip, NY (ISP)</option>
+                              <option value="Ithaca, NY (ITH)">Ithaca, NY (ITH)</option>
+                              <option value="Latrobe, PA (LBE)">Latrobe, PA (LBE)</option>
+                              <option value="Morgantown, WV (MGW)">Morgantown, WV (MGW)</option>
+                              <option value="New York / Newark, NJ (EWR)">New York / Newark, NJ (EWR)</option>
+                              <option value="New York, NY (JFK)">New York, NY (JFK)</option>
+                              <option value="New York, NY (LGA)">New York, NY (LGA)</option>
+                              <option value="Newburgh, NY (SWF)">Newburgh, NY (SWF)</option>
+                              <option value="Niagara Falls, NY (IAG)">Niagara Falls, NY (IAG)</option>
+                              <option value="Philadelphia, PA (PHL)">Philadelphia, PA (PHL)</option>
+                              <option value="Pittsburg, PA (PIT)">Pittsburg, PA (PIT)</option>
+                              <option value="Plattsburgh, NY (PBG)">Plattsburgh, NY (PBG)</option>
+                              <option value="Rochester, NY (ROC)">Rochester, NY (ROC)</option>
+                              <option value="Salisbury, MD (SBY)">Salisbury, MD (SBY)</option>
+                              <option value="State College, PA (SCE)">State College, PA (SCE)</option>
+                              <option value="Syracuse, NY (SYR)">Syracuse, NY (SYR)</option>
+                              <option value="Toledo, OH (TOL)">Toledo, OH (TOL)</option>
+                              <option value="Trenton, NJ (TTN)">Trenton, NJ (TTN)</option>
+                              <option value="Watertown, NY (ART)">Watertown, NY (ART)</option>
+                              <option value="White Plains, NY (HPN)">White Plains, NY (HPN)</option>
+                              <option value="Wilkes-Barre, PA (AVP)">Wilkes-Barre, PA (AVP)</option>
+                              <option value="Williamsport, PA (IPT)">Williamsport, PA (IPT)</option>
+                              <option value="Wilmington, DE (ILG)">Wilmington, DE (ILG)</option>
+                              <option value="Youngstown, OH (YNG)">Youngstown, OH (YNG)</option>
+                           </template>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 32px">
+                                <div>
+                                    <label for="departure" style="display:block; font-size: 14.4px; margin-bottom: 0.4em">Departure</label>
+                                    <!--<input required style="width: 182px" type="date" name="departure" class="flightDate">-->
+                                    <input type="text" id="datepicker" style="width: 182px" type="date" name="departure" class="flightDate">
+
+
+                                </div>
+                                <div id="returnDiv">
+                                    <label for="return" style="display:block; font-size: 14.4px; margin-bottom: 0.4em">Return</label>
+                                    <input type="text" id="datepicker2" style="width: 182px" type="date" name="return" class="flightDate">
+                                </div>
+                            </div>
+                            <input type="submit" class="mainButton" value="Find Flights">
+                        </form>
+                    </div>
+                    <div id="manage" style="display: none">
+                        <div style="margin: 0 16px">View flight details, change seats, change dates/times, or cancel a current reservation.</div>
+                        <form style="margin: 16px 0; text-align: center">
+                            <div style="display: inline-block; margin-bottom: 16px">
+                                <label for="lastName" style="display:block; font-size: 14.4px; margin-bottom: 0.4em; text-align: left">Last Name</label>
+                                <input required class="airportSelection" name="lastName" type="text">
+                            </div>
+                            <br>
+                            <div style="display: inline-block">
+                                <label for="ticketNumber" style="display:block; font-size: 14.4px; margin-bottom: 0.4em; text-align: left">Confirmation Code / eTicket #</label>
+                                <input required class="airportSelection" name="ticketNumber" type="text">
+                            </div>
+                            <button class="mainButton" style="margin-top: 32px">Continue</button>
+                        </form>
+                    </div>
+                    <div id="check-in" style="display: none">
+                        <div style="margin: 0 16px">Online check-in begins 24-1 hours before departure; print your boarding pass at home.</div>
+                        <form style="margin: 16px; text-align: center">
+                            <div style="display: inline-block; margin-bottom: 16px" class="autocomplete">
+                                <label for="departureAirport" style="display:block; font-size: 14.4px; margin-bottom: 0.4em; text-align: left">Departure Airport</label>
+                                <input required class="airportSelection" list="airports3" name="departureAirport" autocomplete="off" type="text" spellcheck="false" id="departureAirport">
+                            </div>
+                            <br>
+                            <div style="display: inline-block">
+                                <label for="ticketNumber" style="display:block; font-size: 14.4px; margin-bottom: 0.4em; text-align: left">Confirmation Code / eTicket #</label>
+                                <input required class="airportSelection" name="ticketNumber" type="text">
+                            </div>
+                            <button class="mainButton" style="margin-top: 32px">Continue</button>
+                        </form>
+                    </div>
+                    <div id="flight-status" style="display: none">
+                        <div style="margin: 0 16px">View information about your flight, such as delays or cancellations.</div>
+                        <form style="margin: 16px 0; text-align: center">
+                            <div style="display: inline-block; margin-bottom: 16px">
+                                <label for="departure" style="display:block; font-size: 14.4px; margin-bottom: 0.4em; text-align: left">Departure</label>
+                                <input required style="width: 182px" type="date" name="flightDeparture" class="flightDate" id="flightDeparture">
+                            </div>
+                            <br>
+                            <div style="display: inline-block">
+                                <label for="departure" style="display:block; font-size: 14.4px; margin-bottom: 0.4em; text-align: left">Flight Number</label>
+                                <input required class="airportSelection" name="flightNumber" type="text">
+                            </div>
+                            <button class="mainButton" style="margin-top: 32px">Continue</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="slogan">
+                <div style="font-size: 55px; padding: 8px 0; font-family: Open Sans" id="title">
+                    <span>Astra Airlines™</span>
+                </div>
+                <div style="font-size: 30px; font-family: Open Sans" id="subtitle">Lower Fares, Fewer Restrictions, Full Freedom</div>
+            </div>
+        </div>
+        <div id="home-toc-container">
+
+        </div>
+        <section class="intro">
+            <iframe width="1500" height="600" src="https://www.youtube.com/embed/Fuwct3QPA00" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+        <section class="intro" style="background:linear-gradient(white 0%, white 50%, white 50%, white 100%); margin-bottom: 60px">
+            <div style="background: url('');background-size: cover; box-shadow: 0 1px 1px 0 rgba(60,64,67,.08), 0 1px 3px 1px rgba(60,64,67,.16); flex-direction: column; border-radius: 5px" id="reviews">
+                <span class="wow fadeIn" data-wow-delay="0.15s">
+                  <div class="intro-title" style="color: black; text-align: center; width: 100%; margin-bottom: 8px">Reviews</div>
+                  <div class="intro-para" style="color: black; margin-bottom: 30px; text-align: center; width: 100%">See how our customers rate our services:</div>
+                  <div style="width: 100%" id="reviews">
+                     <div class="carousel" data-flickity='{"wrapAround": true, "autoPlay": true}'>
+                        <div class="carousel-cell">
+                           <div style="margin: 16px">
+                              <div>
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#e19700">
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                 </svg>
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#e19700">
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                 </svg>
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#e19700">
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                 </svg>
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#e19700">
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                 </svg>
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#e19700">
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                 </svg>
+                              </div>
+                              <div style="color: #5f6368; margin-bottom: 16px">Tiffany J.</div>
+                              <div style="color: #000">The customer service over the phone was amazing, they made sure I made it home right in time for Christmas! After my first trip with Astra Airlines, all my future trips had been with Astra Airlines.</div>
+                           </div>
+                        </div>
+                        <div class="carousel-cell">
+                           <div style="margin: 16px">
+                              <div>
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#e19700">
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                 </svg>
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#e19700">
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                 </svg>
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#e19700">
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                 </svg>
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#e19700">
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                 </svg>
+                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24" fill="#e19700">
+                                    <defs>
+                                       <path id="a" d="M0 0h24v24H0V0z"/>
+                                    </defs >
+                                    <clipPath id="b">
+                                       <use xlink:href="#a" overflow="visible"/ >
+                                    </clipPath>
+                                    <path clip-path="url(#b)" d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4V6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"/>
+                                 </svg>
+                              </div>
+                              <div style="color: #5f6368; margin-bottom: 16px">Rohan P.</div>
+                              <div style="color: #000"> As a person who likes to travel, I used to search the internet for quality flights I could actually afford, however after hours of searching I would always have no luck. Once I once started travelling with Astra Airlines,I finally was able to feel satisfied.</div>
+                           </div>
+                        </div>
+                        <div class="carousel-cell">
+                           <div style="margin: 16px">
+                              <div>
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#e19700">
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                 </svg>
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#e19700">
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                 </svg>
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#e19700">
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                 </svg>
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#e19700">
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                 </svg>
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#e19700">
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                 </svg>
+                              </div>
+                              <div style="color: #5f6368; margin-bottom: 16px">Juan R.</div>
+                              <div style="color: #000"> I flew with Delta a lot of times and I loved it. The cabin crew is so nice, the food is amazing, the seats are comfortable, it's amazing! I fly Delta airlines two times every summer so I can go to Tennessee. The cabin crew are very nice including the pilots.</div>
+                           </div>
+                        </div>
+                        <div class="carousel-cell">
+                           <div style="margin: 16px">
+                              <div>
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#e19700">
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                 </svg>
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#e19700">
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                 </svg>
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#e19700">
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                 </svg>
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#e19700">
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                 </svg>
+                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24" fill="#e19700">
+                                    <defs>
+                                       <path id="a" d="M0 0h24v24H0V0z"/>
+                                    </defs >
+                                    <clipPath id="b">
+                                       <use xlink:href="#a" overflow="visible"/ >
+                                    </clipPath>
+                                    <path clip-path="url(#b)" d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4V6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"/>
+                                 </svg>
+                              </div>
+                              <div style="color: #5f6368; margin-bottom: 16px">Ryan T.</div>
+                              <div style="color: #000">Service on the ground and onboard​ have been really great so far and I am looking forward to flying with them again soon.</div>
+                           </div>
+                        </div>
+                        <div class="carousel-cell">
+                           <div style="margin: 16px">
+                              <div>
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#e19700">
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                 </svg>
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#e19700">
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                 </svg>
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#e19700">
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                 </svg>
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#e19700">
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                 </svg>
+                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24" fill="#e19700">
+                                    <defs>
+                                       <path id="a" d="M0 0h24v24H0V0z"/>
+                                    </defs >
+                                    <clipPath id="b">
+                                       <use xlink:href="#a" overflow="visible"/ >
+                                    </clipPath>
+                                    <path clip-path="url(#b)" d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4V6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"/>
+                                 </svg>
+                              </div>
+                              <div style="color: #5f6368; margin-bottom: 16px">James S.</div>
+                              <div style="color: #000">I fly Astra Airlines every month and I absolutely love this airline! Whether it be keeping the cabin calm through turbulence to giving me snacks, they always makes sure I am comfortable. Thank you for making my time in the air the best it could be!</div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               <span>
+            </div>
+         </section>
+         <section class="intro" style="background: white">
+            <div id="our-fleet">
+               <div class="intro-media wow fadeIn" data-wow-delay="0.15s" style="margin: 0 80px 0 0; text-align: center;">
+                  <svg width="600" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="airplane-tooltip">
+                     <image xlink:href="img/idk.jpg" height="600" width="600"/>
+                     <svg x="200" y="225" width="40" height="40" viewbox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" data-title="Winglet" data-content='737&apos;s winglets have a new aerofoil pointing downward–creating a ">" shape. There is no metal visible on the leading edge because of special materials and coatings that enable natural laminar flow.' onclick="airplaneOverlay(this)">
+                        <circle cx="20" cy="20" fill="none" r="10" stroke="#FFB215" stroke-width="2">
+                           <animate attributeName="r" from="8" to="20" dur="1.5s" begin="0s" repeatCount="indefinite"/>
+                           <animate attributeName="opacity" from="1" to="0" dur="1.5s" begin="0s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="20" cy="20" fill="#FFB215" r="10"/>
+                     </svg>
+                     
+                     <svg x="385" y="205" width="40" height="40" viewbox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" data-title="Engine" data-content="737 is built with the new CFM LEAP-1B engine, which has a carbon fiber fan blades with a titanium leading edge, chevrons at the rear of the engine casing, and a larger engine that sits higher up and farther forward on the wing." onclick="airplaneOverlay(this)">
+                        <circle cx="20" cy="20" fill="none" r="10" stroke="#FFB215" stroke-width="2">
+                           <animate attributeName="r" from="8" to="20" dur="1.5s" begin="0s" repeatCount="indefinite"/>
+                           <animate attributeName="opacity" from="1" to="0" dur="1.5s" begin="0s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="20" cy="20" fill="#FFB215" r="10"/>
+                     </svg>
+                     <svg x="277" y="300" width="40" height="40" viewbox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" data-title="Interior" data-content="737 includes the innovative Boeing Sky Interior - a design utilizing modern-sculpted sidewalls, customizable LED lighting, and other improvements to both form and function." onclick="airplaneOverlay(this)">
+                        <circle cx="20" cy="20" fill="none" r="10" stroke="#FFB215" stroke-width="2">
+                           <animate attributeName="r" from="8" to="20" dur="1.5s" begin="0s" repeatCount="indefinite"/>
+                           <animate attributeName="opacity" from="1" to="0" dur="1.5s" begin="0s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="20" cy="20" fill="#FFB215" r="10"/>
+                     </svg>
+                  </svg>
+                  <div id="airplaneContent">
+                     <div style="padding: 20px;" id="airplaneData">
+                        <div style="font-size: 20px; margin-bottom: 10px; font-family: Open Sans"></div>
+                        <div style="color: hsla(0, 0%, 7%, 0.8)"></div>
+                     </div>
+                     <details id="airplane-dropdown">
+                        <summary style="text-align: center; padding: 20px 0; outline: none">
+                           <span style="margin-right: -5px">More</span>
+                <svg style="vertical-align: middle; margin-top: -2px" xmlns="http://www.w3.org/2000/svg" fill="#5f6368" width="24" height="24" viewBox="0 0 24 24">
+                              <path d="M7 10l5 5 5-5z"/>
+                              <path d="M0 0h24v24H0z" fill="none"/>
+                           </svg>
+                </summary>
+                <img style="width: 100%; display: block; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px">
+                </details>
+            </div>
+            </div>
+            <div class="intro-text wow fadeIn" data-wow-delay="0.15s">
+                <div class="intro-title">Our Eco-Friendly Aircraft</div>
+                <div class="intro-para" style="margin-bottom: 32px">Our Boeing 737 fleet is designed to offer the greatest flexibility, reliability and efficiency in the single-aisle market. Every aircraft will feature the new Boeing Sky Interior, highlighted by modern sculpted sidewalls and window reveals,
+                    LED lighting that enhances the sense of spaciousness and larger pivoting overhead storage bins.
+                </div>
+                <div class="intro-para" style="margin-bottom: 32px">With the use of alternative fuels and removed excess weight to reduce emissions, our aircraft is the most eco-friendly. With a noise footprint almost seven times smaller than single-aisle and wide-body aircraft. They are also as fuel efficient
+                    as an eco-friendly car, producing emissions that are 30-40% lower than other aircraft. </div>
+                <div class="intro-para">
+                    <a href="https://www.boeing.com/commercial/737ng/" target="_blank">Learn more</a>
+                    <svg style="vertical-align:middle; margin-bottom: 2px" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#1562ff">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                     </svg>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section class="intro" style="position: relative">
+            <div style="position: absolute; left: 0; bottom: 0; width: 10vw; height: 5vw; max-width: 800px; max-height: 200px; padding: 0; background:white; clip-path: polygon(0 0, 0% 100%, 100% 100%);"></div>
+            <div style="position: absolute; right: 0; top: 0; width: 10vw; height: 5vw; max-width: 800px; max-height: 200px; padding: 0; background: white; clip-path: polygon(0 0, 100% 0, 100% 100%);"></div>
+            <div id="eco-friendly" style="display: flex; flex-direction: column" class="wow fadeIn" data-wow-delay="0.15s">
+                <div class="intro-text">
+                    <div class="intro-title" data-wow-delay="0.15s" style="width: 100%; margin-bottom: 16px; display: block">What we Deliver</div>
+                    <div class="intro-para" data-wow-delay="0.15s" style="margin-bottom: 60px; width: 100%">Astra Airlines has been striving to enhance our customers experience since 1980. </div>
+                </div>
+                <div style="display: flex; justify-content: space-around; flex-flow: row wrap;">
+                    <div class="ecoCard">
+                        <div>
+                            <img style="width: 100%; display: block; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px">
+                            <div style="padding: 20px;">
+                                <div style="font-size: 20px; margin-bottom: 10px">Low fares. No hidden fees</div>
+                                <div style="color: hsla(0, 0%, 7%, 0.8)">We know that many airlines are expensive with low quality features, howevever here at Astra Airlines, we have cheaper flights with top notch features, to enhance your expirience.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ecoCard">
+                        <div>
+                            <div style="padding: 20px;">
+                                <div style="font-size: 20px; margin-bottom: 10px">AstraPlus</div>
+                                <div style="color: hsla(0, 0%, 7%, 0.8)">With the best loyalty program in the US, the possibilities are endless. As a member of AstraPlus, Then, you can use your miles for: your future flights, upgrades, Vacations and more</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ecoCard" style="order: 1">
+                        <div>
+                            <div style="padding: 20px;">
+                                <div style="font-size: 20px; margin-bottom: 10px">Complementary Lounge</div>
+                                <div style="color: hsla(0, 0%, 7%, 0.8)"> Whether you want to work or relax before your flight, you can choose how to spend your time in comfort and style at our lounge. </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ecoCard">
+                        <div>
+                            <div style="padding: 20px;">
+                                <div style="font-size: 20px; margin-bottom: 10px">Customer Care</div>
+                                <div style="color: hsla(0, 0%, 7%, 0.8)">With our excellent staff that strives to make your life easier to making sure our customers have a safe and relaxing experience, our customer satisfaction is guaranteed</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ecoCard">
+                        <div>
+                            <div style="padding: 20px;">
+                                <div style="font-size: 20px; margin-bottom: 10px">737 Aircrafts</div>
+                                <div style="color: hsla(0, 0%, 7%, 0.8)">Through exclusively using the Boeing 737 model, we can standardize and optimize our procedures for one aircraft type.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ecoCard">
+                        <div>
+                            <div style="padding: 20px;">
+                                <div style="font-size: 20px; margin-bottom: 10px">Advanced Technology</div>
+                                <div style="color: hsla(0, 0%, 7%, 0.8)">Advanced mapping technology allows Astra Airlines to calculate the shortest directions, saving extra fuel for the next flight and your time.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+
+        </svg>
+        </a>
+        <div class="footer">
+            <div class="contain">
+                <div class="col">
+                    <h1>Reservations</h1>
+                    <ul>
+                        <li><a tabindex="0" href="reservations/book-a-flight.html">Book a Flight</a></li>
+                        <li><a tabindex="0" href="reservations/where-we-fly.html">Where We Fly</a></li>
+
+                    </ul>
+                </div>
+                <div class="col">
+                    <h1>Travel Information</h1>
+                    <ul>
+                        <li><a href="travel-information/check-in.html">Check-In</a></li>
+                        <li><a href="travel-information/manage-flights.html">Manage Flight</a></li>
+                        <li><a href="travel-information/flight-status.html">Flight Status</a></li>
+                        <li><a href="travel-information/policies.html">Policies</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h1>AstraPlus</h1>
+                    <ul>
+                        <li><a href="AstraPlus/membership.html">Membership</a></li>
+                        <li><a href="AstraPlus/upgrades.html">Upgrades</a></li>
+
+                    </ul>
+                </div>
+                <div class="col">
+                    <h1>Other</h1>
+                    <ul>
+
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="termsandconditions.html">Terms and Conditions</a></li>
+
+
+                        <li><a href="credit.html" style="border: solid 1px white; padding: 0 5px">CREDIT</a></li>
+                    </ul>
+                </div>
+                <div class="col social">
+                    <h1>
+                        Social
+                        <svg style="width: 24px; vertical-align: middle; margin-top: -4px" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#fff">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                     </svg>
+                    </h1>
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank">
+                                <svg style="height: 24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                              <path fill="currentColor" d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z" class=""></path>
+                           </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/" target="_blank">
+                                <svg style="height: 24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                              <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" class=""></path>
+                           </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.twitter.com/" target="_blank">
+                                <svg style="height: 24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                              <path fill="currentColor" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z" class=""></path>
+                           </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/" target="_blank">
+                                <svg style="height: 24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                              <path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" class=""></path>
+                           </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js">
+    </script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                    pageLanguage: 'en'
+                },
+                'google_translate_element'
+            );
+        }
+
+        var ctx = document.getElementById('graph').getContext("2d");;
+
+        var myChart = new Chart(ctx, {
+            type: 'horizontalBar',
+            data: {
+                labels: ["Liberty", "Spirit", "Jet Blue", "American Airlines", "United"],
+                datasets: [{
+                    label: "Cost in Dollars",
+                    borderColor: "#FFB215",
+                    borderWidth: 1,
+                    fill: true,
+                    backgroundColor: "#FFB215",
+                    data: [120, 150, 180, 250, 270]
+                }]
+            },
+            options: {
+                animation: {
+                    easing: "easeOutQuart"
+                },
+                legend: {
+                    position: "bottom",
+                    display: false
+                },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            fontColor: "#5f6368",
+                            beginAtZero: true,
+                            padding: 15,
+                            //display: false - remove this and commenting to display: false
+                        },
+                        gridLines: {
+                            drawTicks: false,
+                            display: false,
+                            color: "transparent",
+                            zeroLineColor: "transparent"
+                        }
+                    }],
+                    xAxes: [{
+                        gridLines: {
+                            display: false,
+                            color: "transparent",
+                            zeroLineColor: "transparent"
+                        },
+                        ticks: {
+                            padding: 15,
+                            beginAtZero: true,
+                            fontColor: "#5f6368",
+                            maxTicksLimit: 20,
+                            //display: false - remove this and commenting to display: false
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    </script>
+    <link rel="stylesheet" href="animate.css">
+    <script type="text/javascript" src="wow.js"></script>
+    <link rel="stylesheet" href="https://npmcdn.com/flickity@2/dist/flickity.css">
+    <script type="text/javascript" src="https://npmcdn.com/flickity@2.2.1/dist/flickity.pkgd.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script async type="text/javascript" src="https://userlike-cdn-widgets.s3-eu-west-1.amazonaws.com/c621f009e590e812a678b1a0f9317cb43f246b5ea23241aa988b921188c1297c.js"></script>
+
+</body>
+
+</html>
